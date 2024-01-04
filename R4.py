@@ -9,12 +9,17 @@ sum=0
 def squares(n):
     global k,square,sum
     
-    while n>0:
-        square=k*k
-        n=n-1
-        k=k-1
-        sum=sum+square
+    if(n<0):
+        print('please enter a positive integer')
+
+    else:
+        while n>0:
+            square=k*k
+            n=n-1
+            k=k-1
+            sum=sum+square
+        print('the summation of squares is ' +str(sum))
         
     
-    print('the summationof squares is' +str(sum))
+    
 squares(n)
