@@ -45,13 +45,29 @@ class calculator():
             result=result+num2
             k=k+1
         return result
+    def sub(self):
+        result=0
+        k=1
+        print('Enter the numbers you want to subtract then press Enter when done :')
+        while True:
+            num1=input()
+            if num1 == '':
+                break
+            num2=int(num1)
+            self.num.append(num2)
+            result=num[0]
+            for i in range (len(num)-1):
+                i=i+1
+                result=result-num[i]
 
+            
+        print (result)
         
 
 
 
    
 calc =calculator(num,operation)
-add=calc.ADD()
+sub=calc.sub()
         
 
