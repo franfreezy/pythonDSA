@@ -25,7 +25,7 @@ circle = Circle(radius)
 Area= circle.Area()
 Perimeter=circle.Perimeter()
 print('Area of a circle with radius '+str(radius)+' is : ' + str(Area))
-print('Perimeter of a circle with radius '+str(radius)+' is : ' + str(Perimeter))
+print('Perimeter of a circle with radius '+str(radius)+' is : ' + str(P))
 
 
 
