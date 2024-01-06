@@ -9,27 +9,27 @@ operation=int(input('Enter selected operation: '))
 
 num=[]
 class calculator():
-    
+    global ADD,div
     def __init__(self,num,operation):
         self.num=num
         self.operation=operation
 
-    def select():
+    def select(self):
         if(self.operation==1):
-            ADD()
+            ADD(self)
         if(self.operation==2):
-            sub()
+            sub(self)
         if(self.operation==3):
-            div()
+            div(self)
 
         if(self.operation==4):
-            rem()
+            rem(self)
 
         if(self.operation==5):
-            mul()
+            mul(self)
 
         if(self.operation==6):
-            multiple()
+            multiple(self)
 
         
 
@@ -44,10 +44,12 @@ class calculator():
             num2=int(num1)
             result=result+num2
             k=k+1
-        return result
+            self.num.append(num2)
+        print( result) # return is not working!!!??
+
     def sub(self):
-        result=0
-        k=1
+        
+        
         print('Enter the numbers you want to subtract then press Enter when done :')
         while True:
             num1=input()
@@ -59,6 +61,20 @@ class calculator():
             for i in range (len(num)-1):
                 i=i+1
                 result=result-num[i]
+        print(result) 
+
+    def div(self):
+        print('Enter the numbers you want to divide in their order from left to right then press Enter when done :')
+        while True:
+            num1=input()
+            if num1 == '':
+                break
+            num2=float(num1)
+            self.num.append(num2)
+            result=num[0]
+            for i in range (len(num)-1):
+                i=i+1
+                result=result/num[i]
 
             
         print (result)
@@ -68,6 +84,7 @@ class calculator():
 
    
 calc =calculator(num,operation)
-sub=calc.sub()
-        
+
+operation=calc.select()
+      
 
