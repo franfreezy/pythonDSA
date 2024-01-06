@@ -83,6 +83,21 @@ class calculator():
         remainder=int(num[0]-(multiple*num[1]))
         print ('remainder of '+ str(num[0])+'/'+str(num[1])+' is '+str(remainder))
 
+    def mul(self):
+        print('Enter the numbers you want to multiply then press Enter when done :')
+        while True:
+            num1=input()
+            if num1 == '':
+                break
+            num2=float(num1)
+            self.num.append(num2)
+            result=num[0]
+            for i in range (len(num)-1):
+                i=i+1
+                result=result*num[i]
+
+        print (result)
+
 print( ' a simple calculator program, basically')
 
 operations=['1.add','2.subtract', '3.divide','4.remainder','5.multiply','6.multi-operations']
