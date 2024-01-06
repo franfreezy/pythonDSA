@@ -1,15 +1,7 @@
 # Write a Python program to create a calculator class. Include methods for basic arithmetic operations
-print( ' a simple calculator program, basically')
-
-operations=['1.add','2.subtract', '3.divide','4.remainder','5.multiply','6.multi-operations']
-print('this calculator supports the following operations select one')
-for i in range(len(operations)):
-    print(operations[i])
-operation=int(input('Enter selected operation: '))
-
-num=[]
+#the else statement in selection def went rogue
 class calculator():
-    global ADD,div
+    global ADD,div,sub,rem,mul,multiple
     def __init__(self,num,operation):
         self.num=num
         self.operation=operation
@@ -30,8 +22,7 @@ class calculator():
 
         if(self.operation==6):
             multiple(self)
-
-        
+      
 
     def ADD(self):
         result=0
@@ -76,8 +67,31 @@ class calculator():
                 i=i+1
                 result=result/num[i]
 
-            
         print (result)
+
+
+    def rem(self):
+        print('Enter two numbers you want to get their remainder then press Enter when done :')
+        i=0
+
+        while i<2:
+            num1=int(input('Enter two numbers to find their remainder when divided: '))  
+            self.num.append(num1)
+            i=i+1
+            
+        multiple =int(num[0]/num[1])
+        remainder=int(num[0]-(multiple*num[1]))
+        print ('remainder of '+ str(num[0])+'/'+str(num[1])+' is '+str(remainder))
+
+print( ' a simple calculator program, basically')
+
+operations=['1.add','2.subtract', '3.divide','4.remainder','5.multiply','6.multi-operations']
+print('this calculator supports the following operations select one')
+for i in range(len(operations)):
+    print(operations[i])
+operation=int(input('Enter selected operation: '))
+
+num=[]
         
 
 
@@ -85,6 +99,6 @@ class calculator():
    
 calc =calculator(num,operation)
 
-operation=calc.select()
+calc.select()
       
 
