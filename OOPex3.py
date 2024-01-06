@@ -98,6 +98,10 @@ class calculator():
 
         print (result)
 
+    def multiple(self):
+        #otek manade
+
+
 print( ' a simple calculator program, basically')
 
 operations=['1.add','2.subtract', '3.divide','4.remainder','5.multiply','6.multi-operations']
