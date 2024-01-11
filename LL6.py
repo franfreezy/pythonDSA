@@ -14,26 +14,44 @@ class LinkedList:
         if self.head is None:
             print('linked list is empty')
             return
+
         itr=self.head
         llstr=''
-        while itr.next:
+        while itr:
             llstr += str(itr.data)
             itr=itr.next
         print(llstr)
-
+    
 
     def addAtTheEnd(self,data):
         if self.head is None:
-            self.head=Node(data,None)
+            node=Node(data,None) #if the ll is empty then the next is none and dat ais added
+            self.head=node
             return
 
         itr=self.head
         while itr.next:
             itr=itr.next
-        itr.next=Node(data,None)
+
+        #the above while iterates until there's no itr.next no more. after which we now add the next
+        node = Node(data,None) # since its at the end, next is none
+        itr.next=node  #synonymous to self.head.next, takes care for when the head is empty...
+
         
     def addAList(self,dataList):
         self.head=None
         for data in dataList:
+            self.addAtTheEnd(data)
         
-    def removeFirst(self, index,data)
+    def removeFirst(self, index):
+        itr=self.head
+        if index==0:
+            
+            self.head=itr.next
+
+ll=LinkedList()
+ll.addAtTheEnd(6)
+ll.print()
+ll.addAList([1,3,5,6,7])
+ll.removeFirst(0 )
+ll.print()

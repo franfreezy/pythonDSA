@@ -60,7 +60,7 @@ class LinkedList:
 
 if __name__=='__main__':
     ll=LinkedList()
-    ll.add_at_beginning(6)
+    
     ll.add_at_the_end(90)
     ll.printing()
     ll.insert_a_list([3,6,8,10])
