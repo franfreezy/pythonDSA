@@ -42,9 +42,15 @@ def part3(expense):
         else:
             return False
 
+#4
+def part4(expense,months):
+    expense.insert(5,1980)
+    months.insert(6,'June')
+    return(expense,months)
 
 
 
 print(part1(expense))
 print(part2(expense))
 print(part3(expense))
+print(part4(expense,months))
