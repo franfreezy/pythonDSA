@@ -6,3 +6,7 @@ class Node:
         self.data=data
         self.next=next
         self.prev=prev
+
+class LinkedList:
+    def __init__(self):
+        self.head=None
