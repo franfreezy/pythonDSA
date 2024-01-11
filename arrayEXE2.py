@@ -15,6 +15,9 @@ heros=['spider man','thor','hulk','iron man','captain america']
 def part1(heros):
     Length=len(heros)
     return Length
-print(part1(heros))
 
 
+def part2(heros):
+    heros.append('black panther')
+    return heros
+print(part2(heros))
