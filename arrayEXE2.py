@@ -31,6 +31,13 @@ def part3(heros):
 def part4(heros):
     heros[1:3]=['dr. Strange'] # the enclosure, makes sure the word remains solids a unit
     return heros
+
+#5
+def part5(heros):
+    heros.sort()
+    return heros
+
 print(part2(heros)) #this must be executed first for accurate result or non-errornous part3 function
 print(part3(heros)) 
 print(part4(heros)) 
+print(part5(heros))
