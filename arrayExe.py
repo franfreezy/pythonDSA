@@ -16,7 +16,7 @@
 ## THE IMPLEMENTATION:
 
 print('Array implementation in python')
-months=[ 'Jan','Feb','Mar','Apr','May']
+months=[ 'Jan','Feb','Mar','Apr','May'] 
 expense = [2200,2350,2600,2130,2190]
 
 #1
@@ -59,3 +59,4 @@ print(part2(expense))
 print(part3(expense))
 print(part4(expense,months))
 print(part5(expense))
+#we can use array months to make the outputs well tailored and refined...
