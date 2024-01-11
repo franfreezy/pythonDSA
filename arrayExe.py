@@ -33,5 +33,18 @@ def part2(expense):
 
     return sum
 
+#3
+def part3(expense):
+    spending = 2000
+    for num in expense:
+        if num ==2000:
+            return True
+        else:
+            return False
+
+
+
+
 print(part1(expense))
 print(part2(expense))
+print(part3(expense))
