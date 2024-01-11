@@ -17,7 +17,7 @@ class LinkedList:
 
     def add_at_the_end(self,data):
         if self.head is None:
-            node=Node(data,None) #if the ll is empty then the next is none and dat ais added
+            self.head=Node(data,None) 
             return
 
         itr=self.head
@@ -43,8 +43,7 @@ class LinkedList:
 
 if __name__ =='__main__':
     ll=LinkedList()
-    ll.add_at_beginning(4)
-    ll.add_at_beginning(10)
+    
     ll.add_at_the_end(5)
     ll.add_at_the_end(6)
     ll.add_at_the_end(7)
