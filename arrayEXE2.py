@@ -20,4 +20,12 @@ def part1(heros):
 def part2(heros):
     heros.append('black panther')
     return heros
-print(part2(heros))
+
+
+def part3(heros):
+    
+    heros.remove('black panther')
+    heros.insert(3,'black panther')
+    return heros
+print(part2(heros)) #this must be executed first for accurate result or non-errornous part3 function
+print(part3(heros)) 
