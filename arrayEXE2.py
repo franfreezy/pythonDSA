@@ -27,5 +27,10 @@ def part3(heros):
     heros.remove('black panther')
     heros.insert(3,'black panther')
     return heros
+
+def part4(heros):
+    heros[1:3]=['dr. Strange'] # the enclosure, makes sure the word remains solids a unit
+    return heros
 print(part2(heros)) #this must be executed first for accurate result or non-errornous part3 function
 print(part3(heros)) 
+print(part4(heros)) 
