@@ -15,6 +15,19 @@ class LinkedList:
                                   #in the beginning, then the head becomes the next
         self.head=node
 
+    def add_at_the_end(self,data):
+        if self.head is None:
+            node=Node(data,None) #if the ll is empty then the next is none and dat ais added
+            return
+
+        itr=self.head
+        while itr.next:
+            itr=itr.next
+
+        #the above while iterates until there's no itr.next no more. after which we now add the next
+        node = Node(data,None) # since its at the end, next is none
+        itr.next=node  #synonymous to self.head.next, takes care for when the head is empty...
+
 
     def printing(self):   # we create this method for printing purposes only....
         if (self.head==None):
@@ -30,9 +43,11 @@ class LinkedList:
 
 if __name__ =='__main__':
     ll=LinkedList()
-    ll.add_at_beginning(5)
-    ll.add_at_beginning(15)
-    ll.add_at_beginning(54)
+    ll.add_at_beginning(4)
+    ll.add_at_beginning(10)
+    ll.add_at_the_end(5)
+    ll.add_at_the_end(6)
+    ll.add_at_the_end(7)
     ll.printing()
 
 
