@@ -96,9 +96,9 @@ class calculator():
                 i=i+1
                 result=result*num[i]
 
-        print (result)
+        print(result)
 
-    def multiple(self):
+    #def multiple(self):
         #otek manade
 
 
