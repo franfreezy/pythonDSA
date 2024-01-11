@@ -23,4 +23,15 @@ def part1(expense):
     expenseDifference = expense[1]-expense[0]
     return expenseDifference
 
+
+
+#2 
+def part2(expense):
+    sum=0
+    for i in range(3):
+        sum=sum+expense[i]
+
+    return sum
+
 print(part1(expense))
+print(part2(expense))
