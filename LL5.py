@@ -62,18 +62,17 @@ class LinkedList:
             return
 
         if index==0:
-            print('new one')
-            
-            self.head=data
+          
             itr=self.head
-            print(itr)
+            while itr.next:
+                node = Node(data,self.head)
+                self.head=node
+
+            return
             
-            while itr:
-                itr=itr.next
-                return(itr)
                 
                 
-            print('new one')
+            
             
             
             
@@ -92,7 +91,7 @@ if __name__=='__main__':
     
     ll.print()
     ll.setANewValue(0,9)
-    
+    ll.print()
     
     
     
