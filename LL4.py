@@ -34,10 +34,16 @@ class LinkedList:
             itr=itr.next
         itr.next=Node(data,None)
 
+    def addAList(self,dataList):  #this actually makes our list empty first before adding our list
+        self.head=None 
+        for data in dataList:
+            self.addAtTheEnd(data)
+
 if __name__=='__main__':
     ll=LinkedList()
     
     ll.addTobeginning(1)
     ll.addAtTheEnd(7)
+    ll.addAList([2,3])
     ll.print()
         
