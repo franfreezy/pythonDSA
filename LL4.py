@@ -45,12 +45,23 @@ class LinkedList:
         for data in dataList:
             self.addAtTheEnd(data) 
     ## now lets solve our problem
+    
     def AccessingBasedOnIndex(self,index):
        
        
         if index==0:
             print(self.head.data) #without the data it prints the location
-            
+    #to print in othe location we need a function to get the length
+
+    def getSize(self):
+        count=0
+        itr=self.head
+
+        while itr:  #with itr we have the correct length unlike missing one with itr.next
+            count+=1
+            itr=itr.next
+        print (count)
+
             
             
             
@@ -59,11 +70,12 @@ if __name__=='__main__':
     ll=LinkedList()
     
     ll.addTobeginning(1)
-    ll.AccessingBasedOnIndex(0)
+    
     ll.addAtTheEnd(7)
     ll.addToList([2,3])
     
     ll.print()
-    
+    ll.getSize()
+    ll.AccessingBasedOnIndex(0)
     
         
