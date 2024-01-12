@@ -68,6 +68,7 @@ class LinkedList:
         while count!=index-1: #must be one less so that we do not get a null as the result
             count+=1
             itr=itr.next
+            
         print(itr.data)
         
 
@@ -88,6 +89,6 @@ if __name__=='__main__':
     ll.print()
 
     print(ll.getSize())
-    ll.AccessingBasedOnIndex(3)
+    ll.AccessingBasedOnIndex(0)
     
         
