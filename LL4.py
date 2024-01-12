@@ -44,12 +44,26 @@ class LinkedList:
         #removing the initialisation of self.head to none solves it.
         for data in dataList:
             self.addAtTheEnd(data) 
+    ## now lets solve our problem
+    def AccessingBasedOnIndex(self,index):
+       
+       
+        if index==0:
+            print(self.head.data) #without the data it prints the location
+            
+            
+            
+            
 
 if __name__=='__main__':
     ll=LinkedList()
     
     ll.addTobeginning(1)
+    ll.AccessingBasedOnIndex(0)
     ll.addAtTheEnd(7)
     ll.addToList([2,3])
+    
     ll.print()
+    
+    
         
