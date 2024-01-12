@@ -62,13 +62,14 @@ class LinkedList:
             return
 
         if index==0:
-          
             itr=self.head
-            while itr.next:
-                node = Node(data,self.head)
-                self.head=node
+            node = Node(data,self.head)
+            
+            
+            while itr:
+                itr=node
 
-            return
+            print(itr) 
             
                 
                 
@@ -91,7 +92,7 @@ if __name__=='__main__':
     
     ll.print()
     ll.setANewValue(0,9)
-    ll.print()
+    
     
     
     
