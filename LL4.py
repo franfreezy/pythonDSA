@@ -39,11 +39,17 @@ class LinkedList:
         for data in dataList:
             self.addAtTheEnd(data)
 
+    #lemme try adding to a list with values
+    def addToList(self,dataList):  #this actually makes our list empty first before adding our list
+        #removing the initialisation of self.head to none solves it.
+        for data in dataList:
+            self.addAtTheEnd(data) 
+
 if __name__=='__main__':
     ll=LinkedList()
     
     ll.addTobeginning(1)
     ll.addAtTheEnd(7)
-    ll.addAList([2,3])
+    ll.addToList([2,3])
     ll.print()
         
