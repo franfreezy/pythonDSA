@@ -51,7 +51,10 @@ class LinkedList:
        
         if index==0:
             print(self.head.data) #without the data it prints the location
-    #to print in othe location we need a function to get the length
+                                  #to print in othe location we need a function to get the length
+            return
+        if index<0 or index>self.getSize():
+            print('invalid index')
 
     def getSize(self):
         count=0
@@ -76,6 +79,6 @@ if __name__=='__main__':
     
     ll.print()
     ll.getSize()
-    ll.AccessingBasedOnIndex(0)
+    ll.AccessingBasedOnIndex(-1)
     
         
