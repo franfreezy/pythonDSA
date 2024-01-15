@@ -23,6 +23,17 @@ class LinkedList:
     def addTobeginning(self,data):
         node = Node(data,self.head)
         self.head=node
+    def replacetheFirst(self,data):
+        itr=self.head
+        count=0
+        while itr:
+
+            if count==0:
+                node = Node(data,itr.next)
+                self.head=node
+                break
+
+        
 
     def addAtTheEnd(self,data):
 
@@ -60,11 +71,20 @@ class LinkedList:
         if index < 0 or index >self.getSize():
             print('invalid index')
             return
+
+        if index==0:
+            
+            self.replacetheFirst(data)
+            
+           
+            
+
+
         itr=self.head
           
         count=0
         while itr:
-            if count==index-1:
+            if index==count+1:
                 node = Node(data,itr.next.next)
                 itr.next=node
                 break
@@ -93,12 +113,13 @@ if __name__=='__main__':
     
     ll.addTobeginning(1)
     ll.addTobeginning(10)
-    
+    ll.addTobeginning(3)
     ll.addAtTheEnd(7)
     ll.addToList([2,7,3])
+    
     ll.print()
-   
-    ll.setANewValue(2,9)
+    
+    ll.setANewValue(0,9)
     ll.print()
     
     
