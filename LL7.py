@@ -54,10 +54,14 @@ class LinkedList:
             
             itr=itr.next
             print(itr.data)
-
-        node=Node(itr,None)
-        itr.next=node
-        return itr.data
+            
+        print(itr.data)
+        new_itr=itr.next
+        print(new_itr.data)
+        node=Node(new_itr.data,None)#.data makes sure we don't get the hex values
+        itr.next=node # we just need to think through logically to get it right...
+        
+        
           
         
         
