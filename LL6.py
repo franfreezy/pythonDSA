@@ -18,7 +18,7 @@ class LinkedList:
         itr=self.head
         llstr=''
         while itr:
-            llstr += str(itr.data)
+            llstr += str(itr.data)+ '----'
             itr=itr.next
         print(llstr)
     
@@ -50,8 +50,10 @@ class LinkedList:
             self.head=itr.next
 
 ll=LinkedList()
-ll.addAtTheEnd(6)
+
 ll.print()
 ll.addAList([1,3,5,6,7])
+ll.print()
+ll.addAtTheEnd(6)
 ll.removeFirst(0 )
 ll.print()
