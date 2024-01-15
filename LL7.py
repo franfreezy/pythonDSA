@@ -50,12 +50,16 @@ class LinkedList:
 
     def removeLast(self):
         itr=self.head
-        while itr.next.next:
+        while itr.next.next.next:
             
             itr=itr.next
             print(itr.data)
-            
-        return
+
+        node=Node(itr,None)
+        itr.next=node
+        return itr.data
+          
+        
         
         
         
