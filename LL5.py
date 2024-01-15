@@ -60,16 +60,22 @@ class LinkedList:
         if index < 0 or index >self.getSize():
             print('invalid index')
             return
-
-        if index==0:
-            itr=self.head
-            node = Node(data,self.head)
+        itr=self.head
+          
+        count=0
+        while itr:
+            if count==index-1:
+                node = Node(data,itr.next.next)
+                itr.next=node
+                break
+             
             
+            itr=itr.next
+            count+=1
+             
             
-            while itr:
-                itr=node
 
-            print(itr) 
+           
             
                 
                 
@@ -86,13 +92,14 @@ if __name__=='__main__':
     ll=LinkedList()
     
     ll.addTobeginning(1)
+    ll.addTobeginning(10)
     
     ll.addAtTheEnd(7)
-    ll.addToList([2,3])
-    
+    ll.addToList([2,7,3])
     ll.print()
-    ll.setANewValue(0,9)
-    
+   
+    ll.setANewValue(2,9)
+    ll.print()
     
     
     
