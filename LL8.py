@@ -4,8 +4,8 @@
 class Node:
     def __init__(self,data):
         self.data=data
-        self.next=next
-        self.prev=prev
+        self.prev=None
+        self.next=None
 
 class DLinkedList:
     def __init__(self):
@@ -22,11 +22,32 @@ class DLinkedList:
         if itr is None:
             self.head=new_node
             self.tail=new_node #this makes our list doubly.
-            return
+            
+        else:
+            
+            self.tail.next=new_node
+            new_node.prev=self.tail
+            self.tail=new_node
+    
+    def FWiteration(self):
+        itr=self.head
+        dllstr=''
+        while itr:
+            dllstr += str(itr.data)+'----'
+            itr=itr.next
+        print (dllstr)
+
+    def BWiteration():
+        pass
+           
+
 
 
 
 if __name__=='__main__':
     item=DLinkedList()
     item.append(5)
-    print()
+    item.append(5)
+    item.append(51)
+    item.FWiteration()
+    
