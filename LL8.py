@@ -29,7 +29,7 @@ class DLinkedList:
             new_node.prev=self.tail
             self.tail=new_node
     
-    def FWiteration(self):
+    def FWiteration(self): #prints forward
         itr=self.head
         dllstr=''
         while itr:
@@ -37,7 +37,7 @@ class DLinkedList:
             itr=itr.next
         print (dllstr)
 
-    def BWiteration(self):
+    def BWiteration(self): #prints backwards
         itr=self.tail
         dllstr=''
         while itr:
