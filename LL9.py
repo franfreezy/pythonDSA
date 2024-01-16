@@ -56,12 +56,17 @@ class dLinkedList:
         if index<0 or index>self.size:
             raise Exception('invalid index')
             return
-            
+
         while index!=count:
             count+=1
             current=current.next
+          
+        self.tail=current #make sure the assignment logically is sensible
+       
+
+
             
-        print(current.data)
+
         
 
     
@@ -84,5 +89,6 @@ dll.append(14)
 dll.prepend(10)
 dll.prepend(100)
 dll.printf()
+print('testing our method out')
+dll.Testpoint(2)
 dll.printb()
-dll.Testpoint(30)
