@@ -37,8 +37,13 @@ class DLinkedList:
             itr=itr.next
         print (dllstr)
 
-    def BWiteration():
-        pass
+    def BWiteration(self):
+        itr=self.tail
+        dllstr=''
+        while itr:
+            dllstr += str(itr.data)+'----'
+            itr=itr.prev
+        print (dllstr)
            
 
 
@@ -50,4 +55,4 @@ if __name__=='__main__':
     item.append(5)
     item.append(51)
     item.FWiteration()
-    
+    item.BWiteration()
