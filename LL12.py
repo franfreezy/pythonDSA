@@ -40,15 +40,21 @@ class dLinkedList:
         count=0
         current=self.head
         new_node=Node(data)
-        while count==index-1:
-            current=current.next
-            count+=1
+        while current.next:
 
+            if count==index-1:
+                current.next=new_node
+                new_node.prev=current
+                new_node.next=current.next
+                print('here')
+                break
+                
+        print('this loop')
+        current=current.next
+        count+=1
         
-        current.next=new_node
-        new_node.prev=current
-        new_node.next=current.next
-        print(current.data) 
+        
+        
     
     def printf(self):
         current=self.head
