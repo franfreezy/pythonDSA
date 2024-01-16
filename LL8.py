@@ -7,6 +7,20 @@ class Node:
         self.next=next
         self.prev=prev
 
-class LinkedList:
+class DLinkedList:
     def __init__(self):
         self.head=None
+
+    #lets write a method for displaying
+    def print(self):
+        if self.head is None:
+            print('doubly linked list empty')
+            return
+
+        itr=self.head
+        dllstr=''
+        while itr:
+            dllstr+= str(itr)+ '----'
+            itr=itr.next
+            return
+            
