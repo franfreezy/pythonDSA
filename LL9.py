@@ -25,8 +25,9 @@ class dLinkedList:
             self.tail=new_node # our data becomes self.tail
         
     def prepend(self,data):
+        new_node=Node(data)
         if self.head is None:
-            new_node=Node(data)
+            
             self.head=new_node
             self.tail=new_node
             return
@@ -59,5 +60,7 @@ dll=dLinkedList()
 dll.append(4)
 dll.append(41)
 dll.append(14)
+dll.prepend(10)
+dll.prepend(100)
 dll.printf()
 dll.printb()
