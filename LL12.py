@@ -37,22 +37,27 @@ class dLinkedList:
         if index==0:
             self.prepend(data)
             return
+
         count=0
         current=self.head
         new_node=Node(data)
-        while current.next:
-
+        llstr=''
+        while current:
+            llstr+=str(current.data)+'---'
             if count==index-1:
+                tmp=current.next
                 current.next=new_node
+                new_node.next=tmp
                 new_node.prev=current
-                new_node.next=current.next
-                print('here')
+                
+                
+                
                 break
                 
-        print('this loop')
-        current=current.next
-        count+=1
         
+            current=current.next
+            count+=1
+       
         
         
     
@@ -74,5 +79,5 @@ if __name__=='__main__':
     dll.append(51)
     dll.prepend(9)
     dll.printf()
-    dll.insert(1,3)
+    dll.insert(3,3)
     dll.printf()
