@@ -41,19 +41,40 @@ class dLinkedList:
     def printf(self):
         current=self.head
         dllstr=''
+        self.size=0
         while current:
             dllstr+=str(current.data)+'---'
             current=current.next
+            self.size+=1
         print(dllstr)
+        print('size:'+ str(self.size))
+
+
+    def Testpoint(self,index):
+        current=self.head
+        count=0
+        if index<0 or index>self.size:
+            raise Exception('invalid index')
+            return
+            
+        while index!=count:
+            count+=1
+            current=current.next
+            
+        print(current.data)
+        
 
     
     def printb(self):
         current=self.tail
         dllstr=''
+        self.size=0
         while current:
             dllstr+=str(current.data)+'---'
             current=current.prev
+            self.size+=1
         print(dllstr)
+        print('size:'+ str(self.size))
         
 
 dll=dLinkedList()
@@ -64,3 +85,4 @@ dll.prepend(10)
 dll.prepend(100)
 dll.printf()
 dll.printb()
+dll.Testpoint(30)
