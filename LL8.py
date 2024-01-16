@@ -10,17 +10,23 @@ class Node:
 class DLinkedList:
     def __init__(self):
         self.head=None
+        self.tail= None
 
     #lets write a method for displaying
-    def print(self):
-        if self.head is None:
-            print('doubly linked list empty')
+    
+        #working on our challenge
+    def append(self, data):
+        new_node=Node(data)
+        itr=self.head
+            # we have two scenarios, an empty dll or non-null dll, we have to work out both
+        if itr is None:
+            self.head=new_node
+            self.tail=new_node #this makes our list doubly.
             return
 
-        itr=self.head
-        dllstr=''
-        while itr:
-            dllstr+= str(itr)+ '----'
-            itr=itr.next
-            return
-            
+
+
+if __name__=='__main__':
+    item=DLinkedList()
+    item.append(5)
+    print()
