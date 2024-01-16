@@ -21,7 +21,7 @@ class dLinkedList:
         new_node.next=current
         self.head=new_node  
 
-    def append(self,data):
+    def append(self,data):#this inserts infront of a given list but we want to add somewhere in the middle
         new_node=Node(data)
         if self.head is None:
             self.head=new_node
@@ -41,12 +41,14 @@ class dLinkedList:
         current=self.head
         new_node=Node(data)
         while count==index-1:
-            
             current=current.next
+            count+=1
+
         
         current.next=new_node
         new_node.prev=current
         new_node.next=current.next
+        print(current.data) 
     
     def printf(self):
         current=self.head
@@ -66,5 +68,5 @@ if __name__=='__main__':
     dll.append(51)
     dll.prepend(9)
     dll.printf()
-    dll.insert(0,3)
+    dll.insert(1,3)
     dll.printf()
