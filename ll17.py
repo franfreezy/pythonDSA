@@ -26,16 +26,23 @@ class LinkedList:
         # Now insert data_to_insert after data_after node
         #implementation
         itr=self.head
-        while itr.next:
+        while itr:
             if data_after==self.head:
                 itr.next=Node(data_to_insert,itr.next)
                 self.head=itr
+               
                 continue
+            
+            if itr.data==data_after and itr.next is None:
+                
+                itr.next=Node(data_to_insert,None)
+                break
 
             if itr.data==data_after:
                 
                 itr.next=Node(data_to_insert,itr.next)
-                break
+                
+                
             
             
             itr=itr.next
@@ -68,7 +75,7 @@ if __name__=='__main__':
     ll = LinkedList()
     ll.insert_values(["banana","mango","grapes","orange"])
     ll.print()
-    ll.insert_after_value("banana","apple") # insert apple after mango
+    ll.insert_after_value("mango","apple") # insert apple after mango
     ll.print()
    # #ll.remove_by_value("orange") # remove orange from linked list
     #ll.print()
