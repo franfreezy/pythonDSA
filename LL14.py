@@ -32,26 +32,30 @@ class dLinkedList:
         current=self.head
         node=Node(data)
         count=0
-        
+        llstr=''
         while current:
-            print('here6')
+            
             if current.data==node.data:
-                print('here7')
+                
                 if count==0:
-                    print('here5')
+                    
                     current=current.next
                     self.head=current
-                    count+=1
+                    
                     return
                 else:
-                    #current=current.prev.prev 
-                    #count+=1
-                    print('here3')
-                    #return 
-            print('here1') 
-            print(count)         
+                    current=current.next
+                    #print(current.data)
+                    #current.prev=current.prev.prev
+                    #print('here3')
+                    #print(current.data)
+                    #print(current.prev.data)
+                    
+            llstr+=str(current.data)+'--'
+            count+=1
+                    
             current=current.next
-            print('here2')     
+        print(llstr)    
                     
             
           
@@ -69,6 +73,6 @@ if __name__=='__main__':
     dll.append(61)
     dll.append(67)
     dll.print()
-    dll.Remove(6)
-    dll.print()
+    dll.Remove(23)
+    
     
