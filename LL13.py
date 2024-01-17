@@ -24,7 +24,12 @@ class dLinkedList:
 
 
     def print(self):
-        pass
+        current=self.head
+        dllstr=''
+        while current:
+            dllstr+=str(current.data)+'----'
+            current=current.next
+        print (dllstr)
 
     def search(self,data):
         pass
@@ -35,3 +40,4 @@ if __name__=='__main__':
     dll.append(23)
     dll.append(61)
     dll.append(67)
+    dll.print()
