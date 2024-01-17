@@ -97,47 +97,7 @@ if __name__ == '__main__':
     ll.insert_at_end(67)
     ll.print()
 
-    ### ex
-    # Exercise: Linked List
-
-#1. In [LinkedList class]
-def insert_after_value(self, data_after, data_to_insert):
-    # Search for first occurance of data_after value in linked list
-    # Now insert data_to_insert after data_after node
-    #implementation
-    itr=self.head
-    node=Node(data_after)
-    count=0
-    while itr:
-        if current.data==node.data:
-            tmp=current.next
-            current.next=node.data
-            current.next.next=tmp
-
-
-        
-
-
-def remove_by_value(self, data):
-    # Remove first node that contains data
-    pass
-
-#Now make following calls,
-
-    ll = LinkedList()
-    ll.insert_values(["banana","mango","grapes","orange"])
-    ll.print()
-    ll.insert_after_value("mango","apple") # insert apple after mango
-   # ll.print()
-   # #ll.remove_by_value("orange") # remove orange from linked list
-    #ll.print()
     
-    #ll.remove_by_value("figs")
-    #ll.print()
-    #ll.remove_by_value("banana")
-    #ll.remove_by_value("mango")
-    #ll.remove_by_value("apple")
-    #ll.remove_by_value("grapes")
-    #ll.print()
+
 
 
