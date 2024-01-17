@@ -45,11 +45,9 @@ class dLinkedList:
                     return
                 else:
                     current=current.next
-                    #print(current.data)
-                    #current.prev=current.prev.prev
-                    #print('here3')
-                    #print(current.data)
-                    #print(current.prev.data)
+                    
+                    current.prev=current.prev.prev
+                    
                     
             llstr+=str(current.data)+'--'
             count+=1
