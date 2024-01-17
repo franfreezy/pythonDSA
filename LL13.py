@@ -31,8 +31,20 @@ class dLinkedList:
             current=current.next
         print (dllstr)
 
+##implementation
     def search(self,data):
-        pass
+        current=self.head
+        node=Node(data)
+        while current:
+            if current.data==node.data:
+                print(True) 
+                break
+            
+            current=current.next
+        
+       
+
+
 
 if __name__=='__main__':
     dll=dLinkedList()
@@ -41,3 +53,4 @@ if __name__=='__main__':
     dll.append(61)
     dll.append(67)
     dll.print()
+    dll.search(23)
