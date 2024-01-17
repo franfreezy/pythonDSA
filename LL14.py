@@ -39,7 +39,8 @@ class dLinkedList:
                     current=current.next
                     self.head=current
                     return
-                
+                else:
+                    pass
                 
                 return
             
