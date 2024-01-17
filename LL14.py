@@ -32,9 +32,8 @@ class dLinkedList:
         new=self.head
         node=Node(data)
         count=0
-        llstr=''
+        
         while new:
-            llstr=str(new.data)+'--'
             if new.data==node.data:
                 if count==0:
                     new=new.next
@@ -47,7 +46,8 @@ class dLinkedList:
                     current=current.next
                     count+=1
                     return
-        print(llstr)            
+                    
+                 
                     
             
           
@@ -66,5 +66,5 @@ if __name__=='__main__':
     dll.append(67)
     dll.print()
     dll.Remove(6)
-    #dll.print()
+    dll.print()
     
