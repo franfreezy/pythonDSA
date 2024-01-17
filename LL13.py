@@ -12,7 +12,16 @@ class dLinkedList:
         self.tail=None
 
     def append(self, data):
-        pass
+        node=Node(data)
+        if self.head is None:
+            self.head=node
+            self.tail=node
+            return
+        else:
+            self.tail.next=node
+            node.prev=self.tail
+            self.tail=node
+
 
     def print(self):
         pass
