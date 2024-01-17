@@ -29,25 +29,29 @@ class dLinkedList:
         print (dllstr)
   ##implementation      
     def Remove(self, data):
-        new=self.head
+        current=self.head
         node=Node(data)
         count=0
         
-        while new:
-            if new.data==node.data:
+        while current:
+            print('here6')
+            if current.data==node.data:
+                print('here7')
                 if count==0:
-                    new=new.next
-                    self.head=new
-                    return
-                else:
-                    tmp=current.prev
-                    print('here')
-                    current.prev=tmp
+                    print('here5')
                     current=current.next
+                    self.head=current
                     count+=1
                     return
-                    
-                 
+                else:
+                    #current=current.prev.prev 
+                    #count+=1
+                    print('here3')
+                    #return 
+            print('here1') 
+            print(count)         
+            current=current.next
+            print('here2')     
                     
             
           
