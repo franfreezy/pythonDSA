@@ -32,30 +32,21 @@ class dLinkedList:
         current=self.head
         node=Node(data)
         count=0
-        dllstr=''
+        
         while current:
-            dllstr+=str(current.data)+'--'
-            print('here')
-            if count==0:
-                current=current.next
-                self.head=current
-
-                return
-                
-
             if current.data==node.data:
-                new=current.next
-                current=current.prev
-                current.next=new
-                print(new.data)
-                ##print(current.prev.data)
-                print(current.next.next.data)
-                break
+                if count==0:
+                    current=current.next
+                    self.head=current
+                    return
+                
+                
+                return
             
         
             current=current.next
-            count+=1
-        print(dllstr)
+            
+        
 
 if __name__=='__main__':
     dll=dLinkedList()
