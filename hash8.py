@@ -20,6 +20,3 @@
 # create 5 positions for 46 (3 in-between and 2 corners). 
 #Total number of ways is: 6*5 =30 
 
-#Type 4: Chaining based collision resolution technique – 
-#In chaining based collision resolution technique, the keys generating same hash value are placed in same 
-# bucket using pointers. The different types of questions based on chaining technique are: 
