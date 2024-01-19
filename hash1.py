@@ -7,14 +7,12 @@
 
 import pandas as pd
 
-my_dict={}
-df=pd.read_csv(r"nyc_weather.csv")
-print(df.iloc[[1]])
-row=df.iloc[]
-for row in df:
-    my_dict={df.iloc[[row]]}
 
-#print(my_dict)
+df=pd.read_csv(r"nyc_weather.csv", index_col="date")
+my_dict=df.to_dict()
+
+
+print(my_dict)
      
 
 
