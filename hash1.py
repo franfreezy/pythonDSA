@@ -4,7 +4,11 @@
 #What was the maximum temperature in first 10 days of Jan
 #Figure out data structure that is best for this problem
 
+import pandas as pd
+pd.__version__
 
+df=pd.read_csv(r"nyc_weather.csv")
+print(df)
 
 
 
