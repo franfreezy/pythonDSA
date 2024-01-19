@@ -9,9 +9,11 @@ import pandas as pd
 
 
 df=pd.read_csv(r"nyc_weather.csv")
-print(df)
-
-
+#print(df)
+for row in df:
+    my_dict={row[0],row[1]}
+    
+     
 
 
 
