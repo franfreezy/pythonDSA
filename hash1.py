@@ -7,12 +7,14 @@
 
 import pandas as pd
 
-
+my_dict={}
 df=pd.read_csv(r"nyc_weather.csv")
-#print(df)
+print(df.iloc[[1]])
+row=df.iloc[]
 for row in df:
-    my_dict={row[0],row[1]}
-    
+    my_dict={df.iloc[[row]]}
+
+#print(my_dict)
      
 
 
