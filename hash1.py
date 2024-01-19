@@ -12,17 +12,28 @@ df=pd.read_csv(r"nyc_weather.csv", index_col="date")
 my_dict=df.to_dict() # pandas easily converts our data to a dictionary
 
 # we can now use hash maps
-print(my_dict)
-def get_hash(key):
-    h=0
-    for char in key:
-        h+=ord(char)
-        return h%max_value
+print(my_dict[1])
 
+
+
+#we can now create a class to take care of the hash table stuffs
+class hashTable:
+    def __init__(self) -> None:
+        self.max_value=10
+        self.arr=[None for i in range(self.max)]
+    
+    #this is the hash function, converts the key to an index for the table
+    def get_hash(self,key):
+        h=0
+        for char in key:
+            h+=ord(char) #this ord() function converts the char to ascii value
+            return h%self.max_value
+    
 
 
      
-
+if __name__=='__main__':
+    item=hashTable()
 
 
 
