@@ -9,10 +9,18 @@ import pandas as pd
 
 
 df=pd.read_csv(r"nyc_weather.csv", index_col="date")
-my_dict=df.to_dict()
+my_dict=df.to_dict() # pandas easily converts our data to a dictionary
 
-
+# we can now use hash maps
 print(my_dict)
+def get_hash(key):
+    h=0
+    for char in key:
+        h+=ord(char)
+        return h%max_value
+
+
+
      
 
 
