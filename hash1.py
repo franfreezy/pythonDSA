@@ -9,7 +9,7 @@ import pandas as pd
 #employing OOP
 class hashTable:
     def __init__(self) -> None:
-        self.max_value=100
+        self.max_value=10
         self.arr=[None for i in range(self.max_value)]
 
     def processCsv(self,DataFile):
@@ -47,7 +47,8 @@ class hashTable:
             for char in key:
                 h+=ord(char) #this ord() function converts the char to ascii value
             index=h%self.max_value
-            
+            print(key)
+            print(index)
             self.arr[index]=self.value[i]
             i+=1
             
@@ -60,7 +61,7 @@ class hashTable:
             h+=ord(char) #this ord() function converts the char to ascii value
         index = h%self.max_value
         
-        return index
+        return self.arr[index]
 
             
     
@@ -75,7 +76,7 @@ if __name__=='__main__':
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
     print(item.get_hash(keys))
-    print(item.get_value("Jan "))
+    print(item.get_value("Jan 9")) #this presents a problem of collision which we must solve
     
 
 
