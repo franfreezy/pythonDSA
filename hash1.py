@@ -39,18 +39,30 @@ class hashTable:
 
     #this is the hash function, converts the key to an index for the table
     def get_hash(self,key):
-        h=0
+        
         i=0
         for key in keys:
-            
+            h=0 # reinitiates every time
+            print(key)
             for char in key:
                 h+=ord(char) #this ord() function converts the char to ascii value
             index=h%self.max_value
+            print(h)
+            print (index)
             self.arr[index]=self.value[i]
             i+=1
-            print (index)
-            print(key)
+            
+            
         return self.arr
+
+    def get_value(self,key):
+        h=0
+        for char in key:
+            h+=ord(char) #this ord() function converts the char to ascii value
+        index = h%self.max_value
+        
+        return index
+
             
     
 
@@ -64,7 +76,7 @@ if __name__=='__main__':
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
     print(item.get_hash(keys))
-    print(result)
+    print(item.get_value("Jan "))
     
 
 
