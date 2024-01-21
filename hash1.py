@@ -21,18 +21,19 @@ def dataFrameToArray(df):
 # we can now use hash maps
 def ArrayToElements(new_arr):
     i=0
-    data=[]
-    for i in range(len(new_arr)):
-        ind_arr=new_arr[i]
-        key=ind_arr[0]
-        value=ind_arr[1]
-        data1=key,value
-        data.append(data1)
+    
+    key=[]
+    value=[]
+    for row in new_arr:
+        key.append(row[0])
+        value.append(row[1])
         
         
-        i+=1
-    print(data)
+        
+       
     print(key)
+    print(value)
+    
 new_arr=dataFrameToArray(df)
 ArrayToElements(new_arr)
 
