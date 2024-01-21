@@ -9,15 +9,29 @@ import pandas as pd
 
 
 df=pd.read_csv(r"nyc_weather.csv")
-
+df=df.rename(columns={'date':'Date','temperature(F)':'temp'})
 def dataFrameToArray(df):
     myArray=[]
-    for row in df:
-        myArray.append(row)
+    for index,row in df.iterrows():
+        date = row['Date']
+        temp = row['temp']
+        data=date,temp
+        myArray.append(data)
     return myArray
 # we can now use hash maps
-print(df)
-print(dataFrameToArray(df))
+def ArrayToElements(new_arr):
+    i=0
+    my_dict={}
+    for i in range(len(new_arr)):
+        ind_arr=new_arr[i]
+        key=ind_arr[0]
+        value=ind_arr[1]
+        my_dict[key]=value
+        
+        i+=1
+    print(my_dict)
+new_arr=dataFrameToArray(df)
+ArrayToElements(new_arr)
 
 
 #we can now create a class to take care of the hash table stuffs
