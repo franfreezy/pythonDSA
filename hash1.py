@@ -76,7 +76,7 @@ if __name__=='__main__':
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
     print(item.get_hash(keys))
-    print(item.get_value("Jan 9")) #this presents a problem of collision which we must solve
+    print(item.get_value("Jan 9")) #this presents a problem of collision which we must solve collides with 10
     
 
 
