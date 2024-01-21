@@ -9,7 +9,7 @@ import pandas as pd
 #employing OOP
 class hashTable:
     def __init__(self) -> None:
-        self.max_value=10
+        self.max_value=100
         self.arr=[None for i in range(self.max_value)]
 
     def processCsv(self,DataFile):
@@ -76,8 +76,8 @@ if __name__=='__main__':
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
     print(item.get_hash(keys))
-    print(item.get_value("Jan 9")) #this presents a problem of collision which we must solve collides with 10
-    
+    print(item.get_value("Jan 10")) #this presents a problem of collision which we must solve collides with 10
+    #larger array implies, less collisions and minimum erreo in getting back a value that is not in the series
 
 
 
