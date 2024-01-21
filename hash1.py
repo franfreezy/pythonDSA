@@ -26,20 +26,25 @@ class hashTable:
             myArray.append(data)
         return myArray
 
-    def ArrayToElements(self,new_arr):
+    def ArrayToKeys(self,new_arr):
         key=[]
-        value=[]
         for row in new_arr:
             key.append(row[0])
+        return key 
+    def ArrayTovalues(self,new_arr):
+        value=[]
+        for row in new_arr:
             value.append(row[1])
-        return key  
+        return value 
 
     #this is the hash function, converts the key to an index for the table
     def get_hash(self,key):
         h=0
-        for char in key:
-            h+=ord(char) #this ord() function converts the char to ascii value
-            return h%self.max_value
+        for key in keys:
+            for char in key:
+                
+                h+=ord(char) #this ord() function converts the char to ascii value
+                return h%self.max_value
     
 
 
@@ -48,7 +53,10 @@ if __name__=='__main__':
     item=hashTable()
     DataFile="nyc_weather.csv"
     item.processCsv(DataFile)
-    print(item.dataFrameToArray(item.processCsv(DataFile)))
+    result=item.dataFrameToArray(item.processCsv(DataFile))
+    keys=item.ArrayToKeys(result)
+    values=item.ArrayTovalues(result)
+    print(item.get_hash(keys))
     
 
 
