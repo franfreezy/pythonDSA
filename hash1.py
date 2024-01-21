@@ -6,7 +6,6 @@
 #Figure out data structure that is best for this problem
 
 import pandas as pd
-
 #employing OOP
 class hashTable:
     def __init__(self) -> None:
@@ -14,9 +13,9 @@ class hashTable:
         self.arr=[None for i in range(self.max_value)]
 
     def processCsv(self,DataFile):
-        df=pd.read_csv(DataFile)
-        df=df.rename(columns={'date':'Date','temperature(F)':'temp'})
-        return df
+        self.df=pd.read_csv(DataFile)
+        self.df=self.df.rename(columns={'date':'Date','temperature(F)':'temp'})
+        return self.df
 
     def dataFrameToArray(self, df):
         myArray=[]
@@ -48,7 +47,8 @@ class hashTable:
 if __name__=='__main__':
     item=hashTable()
     DataFile="nyc_weather.csv"
-    print(item.processCsv(DataFile))
+    item.processCsv(DataFile)
+    print(item.dataFrameToArray(item.processCsv(DataFile)))
     
 
 
