@@ -8,19 +8,23 @@
 import pandas as pd
 
 
-df=pd.read_csv(r"nyc_weather.csv", index_col="date")
-my_dict=df.to_dict() # pandas easily converts our data to a dictionary
+df=pd.read_csv(r"nyc_weather.csv")
 
+def dataFrameToArray(df):
+    myArray=[]
+    for row in df:
+        myArray.append(row)
+    return myArray
 # we can now use hash maps
-
-
+print(df)
+print(dataFrameToArray(df))
 
 
 #we can now create a class to take care of the hash table stuffs
 class hashTable:
     def __init__(self) -> None:
         self.max_value=10
-        self.arr=[None for i in range(self.max)]
+        self.arr=[None for i in range(self.max_value)]
     
     #this is the hash function, converts the key to an index for the table
     def get_hash(self,key):
