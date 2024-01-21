@@ -12,7 +12,7 @@ df=pd.read_csv(r"nyc_weather.csv", index_col="date")
 my_dict=df.to_dict() # pandas easily converts our data to a dictionary
 
 # we can now use hash maps
-print(my_dict[1])
+
 
 
 
