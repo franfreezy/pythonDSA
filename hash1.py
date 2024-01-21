@@ -8,8 +8,6 @@
 import pandas as pd
 
 
-df=pd.read_csv(r"nyc_weather.csv")
-df=df.rename(columns={'date':'Date','temperature(F)':'temp'})
 def dataFrameToArray(df):
     myArray=[]
     for index,row in df.iterrows():
@@ -20,19 +18,12 @@ def dataFrameToArray(df):
     return myArray
 # we can now use hash maps
 def ArrayToElements(new_arr):
-    i=0
-    
     key=[]
     value=[]
     for row in new_arr:
         key.append(row[0])
         value.append(row[1])
-        
-        
-        
-       
-    print(key)
-    print(value)
+    return key  
     
 new_arr=dataFrameToArray(df)
 ArrayToElements(new_arr)
@@ -43,7 +34,11 @@ class hashTable:
     def __init__(self) -> None:
         self.max_value=10
         self.arr=[None for i in range(self.max_value)]
-    
+    def processCsv(self,DataFile):
+        df=pd.read_csv(DataFile)
+        df=df.rename(columns={'date':'Date','temperature(F)':'temp'})
+        return df
+
     #this is the hash function, converts the key to an index for the table
     def get_hash(self,key):
         h=0
