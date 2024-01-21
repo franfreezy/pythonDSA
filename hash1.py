@@ -9,7 +9,7 @@ import pandas as pd
 #employing OOP
 class hashTable:
     def __init__(self) -> None:
-        self.max_value=10
+        self.max_value=100
         self.arr=[None for i in range(self.max_value)]
 
     def processCsv(self,DataFile):
@@ -32,19 +32,25 @@ class hashTable:
             key.append(row[0])
         return key 
     def ArrayTovalues(self,new_arr):
-        value=[]
+        self.value=[]
         for row in new_arr:
-            value.append(row[1])
-        return value 
+            self.value.append(row[1])
+        return self.value 
 
     #this is the hash function, converts the key to an index for the table
     def get_hash(self,key):
         h=0
+        i=0
         for key in keys:
-            print(key)
+            
             for char in key:
                 h+=ord(char) #this ord() function converts the char to ascii value
-            print(h%self.max_value) 
+            index=h%self.max_value
+            self.arr[index]=self.value[i]
+            i+=1
+            print (index)
+            print(key)
+        return self.arr
             
     
 
@@ -57,7 +63,8 @@ if __name__=='__main__':
     result=item.dataFrameToArray(item.processCsv(DataFile))
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
-    item.get_hash(keys)
+    print(item.get_hash(keys))
+    print(result)
     
 
 
