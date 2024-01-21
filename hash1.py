@@ -43,12 +43,11 @@ class hashTable:
         i=0
         for key in keys:
             h=0 # reinitiates every time
-            print(key)
+            
             for char in key:
                 h+=ord(char) #this ord() function converts the char to ascii value
             index=h%self.max_value
-            print(h)
-            print (index)
+            
             self.arr[index]=self.value[i]
             i+=1
             
