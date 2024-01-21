@@ -41,10 +41,11 @@ class hashTable:
     def get_hash(self,key):
         h=0
         for key in keys:
+            print(key)
             for char in key:
-                
                 h+=ord(char) #this ord() function converts the char to ascii value
-                return h%self.max_value
+            print(h%self.max_value) 
+            
     
 
 
@@ -56,7 +57,7 @@ if __name__=='__main__':
     result=item.dataFrameToArray(item.processCsv(DataFile))
     keys=item.ArrayToKeys(result)
     values=item.ArrayTovalues(result)
-    print(item.get_hash(keys))
+    item.get_hash(keys)
     
 
 
