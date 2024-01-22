@@ -14,7 +14,11 @@ class hashtable:
 
     def GetData(self,datafile):
         data=pd.read_fwf(datafile)
-        print(data)
+        for row in data:
+            print(row)
+       
+    def ArrangeData(self):
+        pass
         
         
 if __name__=='__main__':
