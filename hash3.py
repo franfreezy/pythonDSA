@@ -20,8 +20,9 @@ class hashtable:
         data=data.rename(columns={'Two roads diverged in a yellow wood,':'dta'})
        
         for row in data.iterrows():
-            row=data['dta']
-        print(row)
+            row=data['dta'].to_list()
+            
+        print(row)   
         
     def ArrangeData(self):
         pass
