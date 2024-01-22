@@ -9,7 +9,7 @@ class Hashtable:
     def __init__(self) -> None:
         self.my_dict=None
         
-    def dfToDict(self,DataFile):
+    def dfToDict(self,datafile):
         df=pd.read_csv(datafile)
         df=df.rename(columns={'temperature(F)':'temp'})
         self.my_dict=dict(zip(df["date"],df["temp"]))
