@@ -26,7 +26,9 @@ class hashtable:
         new_arr=[]  
         for sentence in my_list:
             sentence = sentence.translate(str.maketrans('', '', string.punctuation))
-            sentence=sentence.split()
+            sentence = sentence.translate(str.maketrans("—", " "))
+            count=count+ ' '+ sentence 
+        print(count.split())
         
                 
                 
