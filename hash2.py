@@ -13,11 +13,20 @@ class Hashtable:
         df=pd.read_csv(datafile)
         df=df.rename(columns={'temperature(F)':'temp'})
         self.my_dict=dict(zip(df["date"],df["temp"]))
-        print(self.my_dict)
+        return (self.my_dict)
+    
+    def getValue(self):
+        key1=input('Enter the date for which you need the data: ')
+        for key2,value in self.my_dict.items():
+            
+            if key1==key2:
+                print(key2,value) 
+                
 
 
 if __name__=='__main__':
     item=Hashtable()
     datafile="nyc_weather.csv"
     item.dfToDict(datafile)
+    item.getValue()
     
