@@ -5,6 +5,9 @@
 #What was the maximum temperature in first 10 days of Jan
 #Figure out data structure that is best for this problem
 
+#this implementation provides the general logic of how hash tables work or py dicts for that
+#matter. it is significant to note that by implementing py dicts we have already formed
+#a hash table.
 import pandas as pd
 #employing OOP
 class hashTable:
@@ -69,7 +72,7 @@ class hashTable:
     
 #highest of the data
     def get_highest(self): #must use data structure with O(1)
-        pass         
+        print(self.arr.values())         
     
 
 
@@ -83,8 +86,8 @@ if __name__=='__main__':
     values=item.ArrayTovalues(result)
     print(item.get_hash(keys))
     print(item.get_value("Jan 10")) #this presents a problem of collision which we must solve collides with 10
-    #larger array implies, less collisions and minimum erreo in getting back a value that is not in the series
-
+    #larger array implies, less collisions and minimum errors in getting back a value that is not in the series
+    item.get_highest()
 
 
 
