@@ -15,8 +15,9 @@ class hashTable:
         return self.my_dict
     
     def get_highest(self):
-        values=self.my_dict.values() #prints values in my dict
-        return values
+        values=self.my_dict.values() #values in my dict
+        max_value=max(values) #computes the max in the values. py in built fn
+        return max_value #prints it
     
     def get_average(self):
         pass
