@@ -14,9 +14,14 @@ class hashtable:
 
     def GetData(self,datafile):
         data=pd.read_fwf(datafile)
-        for row in data:
-            print(row)
-       
+        data.loc[-1] = data.columns.values
+        data.sort_index(inplace=True)
+        data.reset_index(drop=True, inplace=True)
+        #data=data.insert(loc=0, column='Two roads diverged in a yellow wood,', value='Two roads diverged in a yellow wood,')
+        #for row in data.iterrows():
+         #   row=data['']
+        print(data)
+        
     def ArrangeData(self):
         pass
         
