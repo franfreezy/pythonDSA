@@ -17,10 +17,11 @@ class hashtable:
         data.loc[-1] = data.columns.values
         data.sort_index(inplace=True)
         data.reset_index(drop=True, inplace=True)
-        #data=data.insert(loc=0, column='Two roads diverged in a yellow wood,', value='Two roads diverged in a yellow wood,')
-        #for row in data.iterrows():
-         #   row=data['']
-        print(data)
+        data=data.rename(columns={'Two roads diverged in a yellow wood,':'dta'})
+       
+        for row in data.iterrows():
+            row=data['dta']
+        print(row)
         
     def ArrangeData(self):
         pass
