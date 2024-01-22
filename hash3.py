@@ -41,9 +41,6 @@ class hashtable:
         for arr in new_arr:
             print(str(arr[0])+' : '+str(len(arr)))      
         
-    def ArrangeData(self):
-        pass
-        
         
 if __name__=='__main__':
     item=hashtable()
