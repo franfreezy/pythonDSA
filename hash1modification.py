@@ -13,6 +13,13 @@ class hashTable:
         result_dict=dict(zip(self.df["Date"],self.df["temp"]))
         self.my_dict=result_dict
         return self.my_dict
+    
+    def get_highest(self):
+        pass
+    
+    def get_average(self):
+        pass
+    
 
 if __name__=='__main__':
     item=hashTable()
