@@ -19,14 +19,17 @@ class hashtable:
         data.reset_index(drop=True, inplace=True)
         data=data.rename(columns={'Two roads diverged in a yellow wood,':'dta'})
        #the above have processed our data
+        count=''
         for row in data.iterrows():
             my_list=data['dta'].to_list()
-            
+        new_arr=[]  
         for sentence in my_list:
-            
-            for string in sentence:
+            sentence=sentence.split()
+        print(sentence)    
+        
+        
                 
-                print(string)
+                
         
     def ArrangeData(self):
         pass
