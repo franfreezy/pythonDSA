@@ -5,10 +5,16 @@ import pandas as pd
 #employing OOP
 class hashTable:
     def __init__(self) -> None:
-        self.max_value=100
-        self.arr=[None for i in range(self.max_value)]
+        self.my_dict={}
 
     def processCsv(self,DataFile):
         self.df=pd.read_csv(DataFile)
         self.df=self.df.rename(columns={'date':'Date','temperature(F)':'temp'})
-        return self.df
+        result_dict=dict(zip(self.df["Date"],self.df["temp"]))
+        self.my_dict=result_dict
+        return self.my_dict
+
+if __name__=='__main__':
+    item=hashTable()
+    dataFile="nyc_weather.csv"
+    print(item.processCsv(dataFile))
