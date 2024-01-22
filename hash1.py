@@ -62,8 +62,10 @@ class hashTable:
         index = h%self.max_value
         
         return self.arr[index]
+#to solve the challenges below, we need to ensure that O(c)where c=1 is used more than O(n)
+#average temp in the first week of jan
 
-            
+#highest of the data         
     
 
 
