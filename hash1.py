@@ -64,8 +64,12 @@ class hashTable:
         return self.arr[index]
 #to solve the challenges below, we need to ensure that O(c)where c=1 is used more than O(n)
 #average temp in the first week of jan
-
-#highest of the data         
+    def get_avg(self): #must use data structure with O(1)
+        pass
+    
+#highest of the data
+    def get_highest(self): #must use data structure with O(1)
+        pass         
     
 
 
