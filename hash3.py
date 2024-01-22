@@ -7,6 +7,7 @@
 # 'I': 8
 
 import pandas as pd
+import string
 
 class hashtable:
     def __init__(self) -> None:
@@ -24,9 +25,8 @@ class hashtable:
             my_list=data['dta'].to_list()
         new_arr=[]  
         for sentence in my_list:
+            sentence = sentence.translate(str.maketrans('', '', string.punctuation))
             sentence=sentence.split()
-        print(sentence)    
-        
         
                 
                 
