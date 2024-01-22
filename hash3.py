@@ -5,3 +5,19 @@
 # 'diverged': 2,
  #'in': 3,
 # 'I': 8
+
+import pandas as pd
+
+class hashtable:
+    def __init__(self) -> None:
+        self.my_dict=None
+
+    def GetData(self,datafile):
+        data=pd.read_fwf(datafile)
+        print(data)
+        
+        
+if __name__=='__main__':
+    item=hashtable()
+    datafile="poem.txt"
+    item.GetData(datafile)
