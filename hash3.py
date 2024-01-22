@@ -12,7 +12,7 @@ from collections import defaultdict
 
 class hashtable:
     def __init__(self) -> None:
-        self.my_dict=de
+        self.my_dict=defaultdict(list)
 
     def GetData(self,datafile):
         data=pd.read_fwf(datafile)
