@@ -17,7 +17,8 @@ class Hashtable:
     
     def getValue(self):
         key1=input('Enter the date for which you need the data: ')
-        for key2,value in self.my_dict.items():
+        for key2,value in self.my_dict.items(): #the items takes care of both keys and values thus 
+                                                #returns both key and value
             
             if key1==key2:
                 print(key2,value) 
