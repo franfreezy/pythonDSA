@@ -18,11 +18,13 @@ class hashtable:
         data.sort_index(inplace=True)
         data.reset_index(drop=True, inplace=True)
         data=data.rename(columns={'Two roads diverged in a yellow wood,':'dta'})
-       
+       #the above have processed our data
         for row in data.iterrows():
-            row=data['dta'].to_list()
+            my_list=data['dta'].to_list()
             
-        print(row)   
+        for sentence in my_list:
+            for string in sentence:
+                print(string)  
         
     def ArrangeData(self):
         pass
