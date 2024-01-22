@@ -15,7 +15,8 @@ class hashTable:
         return self.my_dict
     
     def get_highest(self):
-        pass
+        values=self.my_dict.values() #prints values in my dict
+        return values
     
     def get_average(self):
         pass
@@ -25,3 +26,4 @@ if __name__=='__main__':
     item=hashTable()
     dataFile="nyc_weather.csv"
     print(item.processCsv(dataFile))
+    print(item.get_highest())
