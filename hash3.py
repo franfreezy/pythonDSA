@@ -8,10 +8,11 @@
 
 import pandas as pd
 import string
+from collections import defaultdict
 
 class hashtable:
     def __init__(self) -> None:
-        self.my_dict=None
+        self.my_dict=de
 
     def GetData(self,datafile):
         data=pd.read_fwf(datafile)
@@ -28,9 +29,13 @@ class hashtable:
             sentence = sentence.translate(str.maketrans('', '', string.punctuation))
             sentence = sentence.translate(str.maketrans("—", " "))
             count=count+ ' '+ sentence 
-        print(count.split())
+        count=count.split()
         
-                
+        
+        for word in count:
+            sorted_string=tuple(sorted(word))
+            self.my_dict[sorted_string].append(word)
+        print(self.my_dict)        
                 
         
     def ArrangeData(self):
