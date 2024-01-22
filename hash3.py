@@ -23,8 +23,10 @@ class hashtable:
             my_list=data['dta'].to_list()
             
         for sentence in my_list:
+            
             for string in sentence:
-                print(string)  
+                
+                print(string)
         
     def ArrangeData(self):
         pass
