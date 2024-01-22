@@ -20,7 +20,7 @@ class hashtable:
         data.sort_index(inplace=True)
         data.reset_index(drop=True, inplace=True)
         data=data.rename(columns={'Two roads diverged in a yellow wood,':'dta'})
-       #the above have processed our data
+       #the above have processed our data to have a new column name and set our first line free
         count=''
         for row in data.iterrows():
             my_list=data['dta'].to_list()
