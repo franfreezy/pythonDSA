@@ -7,7 +7,7 @@
 
 #this implementation provides the general logic of how hash tables work or py dicts for that
 #matter. it is significant to note that by implementing py dicts we have already formed
-#a hash table.
+#a hash table
 import pandas as pd
 #employing OOP
 class hashTable:
