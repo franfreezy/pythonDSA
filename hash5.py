@@ -25,7 +25,10 @@
 class hashtable:
     def __init__(self,valArr):
         
-        self.myArray=None
+        self.myArray==[None for i in range(self.max_value)]#without this then we will not be 
+                                                            #alllowed to append any values
+                                                            #we will get either of the 2 errors
+                                                            #none type or index error
         self.max_value=10 
 
     def gethash(self,value):
@@ -33,8 +36,11 @@ class hashtable:
         for value in valArr:
             #to hash an integer, we take the integer and get the modulus of the entire int
             #this is so because we cannot iterate over an integer but we can with strings
-            value=value%self.max_value
+            h=value%self.max_value
+            print(h)
             print(value)
+        self.myArray[h]=value
+        #print(self.myArray)
 
 if __name__=='__main__':
     valArr=[4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199]
