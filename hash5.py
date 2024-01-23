@@ -25,7 +25,7 @@
 class hashtable:
     def __init__(self,valArr):
         self.max_value=10 
-        self.myArray=[None for i in range(self.max_value)] 
+        self.myArray=[[] for i in range(self.max_value)] #this helps solve collisions alongside append()
         #without this then we will not be 
         #alllowed to append any values
         #we will get either of the 2 errors
@@ -40,7 +40,7 @@ class hashtable:
             h=value%self.max_value
             print(h)
             print(value)
-            self.myArray[h]=value
+            self.myArray[h].append(value)#solves collisions alongside []
         print(self.myArray)
 
 if __name__=='__main__':
