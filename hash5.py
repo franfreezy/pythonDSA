@@ -23,6 +23,18 @@
 #
 
 class hashtable:
-    def __init__(self):
+    def __init__(self,valArr):
+        
         self.myArray=None
         max_value=10 
+
+    def gethash(self,value):
+        h=0
+        for value in valArr:
+            #to hash an integer, we take the integer and get the modulus of the entire int
+            
+
+if __name__=='__main__':
+    valArr=[4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199]
+    item=hashtable(valArr)
+    item.gethash(valArr)
