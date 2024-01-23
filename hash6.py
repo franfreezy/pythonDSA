@@ -5,12 +5,25 @@
 class hashtable:
     def __init__(self):
         self.max_value=10
-        self.keysArr=[[] is None for i in range(self.max_value)]
+        self.keysArr=[None for i in range(self.max_value)] 
     
     def getHash(self,keysArr):
+        
         for key in keysArr:
             #hash(key)- the notion that we have an inbuilt hash function falls flat
-            print()
+            h=key%self.max_value
+            print('set1')
+            print(h)
+            print(key)
+            print('new set')
+            while self.keysArr[h] is not None:
+                h+=1
+
+            
+            print(h)
+            print(key)
+            self.keysArr[h]=(key)
+        print(self.keysArr)
 
 if __name__=='__main__':
     item=hashtable()
