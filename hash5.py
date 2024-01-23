@@ -18,3 +18,5 @@
 #As we can see, 9679, 1989 and 4199 hash to same value 9. 
 # Also, 1471 and 6171 hash to same value 1. Therefore,
 #  statement (i) and (ii) are correct which match with option (C). 
+
+##
