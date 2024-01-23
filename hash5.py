@@ -1,12 +1,12 @@
 #Que – 1. Given the following input (4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199) 
 # and the hash function x mod 10, which of the following statements are true? (GATE CS 2004) 
-#i. 9679, 1989, 4199 hash to the same value 
-#ii. 1471, 6171 hash to the same value 
-#iii. All elements hash to the same value 
-#iv. Each element hashes to a different value 
+#i. 9679, 1989, 4199 hash to the same value -true 9
+#ii. 1471, 6171 hash to the same value -true 1
+#iii. All elements hash to the same value -false
+#iv. Each element hashes to a different value -false
 #(A) i only 
 #(B) ii only 
-#(C) i and ii only 
+#(C) i and ii only -correct answer
 #(D) iii or iv 
 
 #Solutions: Using given hash function h(x) = x mod 10 
@@ -19,7 +19,7 @@
 # Also, 1471 and 6171 hash to same value 1. Therefore,
 #  statement (i) and (ii) are correct which match with option (C). 
 
-##to answer this question then we ahve to come up with the hash function
+##to answer this question then we have to come up with the hash function
 #
 
 class hashtable:
