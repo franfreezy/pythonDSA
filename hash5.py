@@ -24,12 +24,13 @@
 
 class hashtable:
     def __init__(self,valArr):
-        
-        self.myArray==[None for i in range(self.max_value)]#without this then we will not be 
-                                                            #alllowed to append any values
-                                                            #we will get either of the 2 errors
-                                                            #none type or index error
         self.max_value=10 
+        self.myArray=[None for i in range(self.max_value)] 
+        #without this then we will not be 
+        #alllowed to append any values
+        #we will get either of the 2 errors
+        #none type or index error
+        
 
     def gethash(self,value):
         h=0
@@ -39,8 +40,8 @@ class hashtable:
             h=value%self.max_value
             print(h)
             print(value)
-        self.myArray[h]=value
-        #print(self.myArray)
+            self.myArray[h]=value
+        print(self.myArray)
 
 if __name__=='__main__':
     valArr=[4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199]
