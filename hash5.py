@@ -26,13 +26,15 @@ class hashtable:
     def __init__(self,valArr):
         
         self.myArray=None
-        max_value=10 
+        self.max_value=10 
 
     def gethash(self,value):
         h=0
         for value in valArr:
             #to hash an integer, we take the integer and get the modulus of the entire int
-            
+            #this is so because we cannot iterate over an integer but we can with strings
+            value=value%self.max_value
+            print(value)
 
 if __name__=='__main__':
     valArr=[4322, 1334, 1471, 9679, 1989, 6171, 6173, 4199]
