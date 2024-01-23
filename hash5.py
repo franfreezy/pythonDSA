@@ -19,4 +19,10 @@
 # Also, 1471 and 6171 hash to same value 1. Therefore,
 #  statement (i) and (ii) are correct which match with option (C). 
 
-##
+##to answer this question then we ahve to come up with the hash function
+#
+
+class hashtable:
+    def __init__(self):
+        self.myArray=None
+        max_value=10 
