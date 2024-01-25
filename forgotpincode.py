@@ -12,6 +12,7 @@ class passcode:
         self.possiblearr8=[None for i in range(self.maxIndex)]
         self.possiblearr9=[None for i in range(self.maxIndex)]
         self.possiblearr10=[None for i in range(self.maxIndex)]
+        self.myArr=[None for i in range(self.max_value)]
     def possible(self):
         count=0
         i1=0
@@ -48,30 +49,12 @@ class passcode:
             i10+=1
 
         
-        myArr=  self.possiblearr1  + self.possiblearr2 + self.possiblearr3 + self.possiblearr4 
-        + self.possiblearr5 +self.possiblearr6 + self.possiblearr7
-        self.possiblearr8 +self.possiblearr9 +self.possiblearr10
-        
-        print('next')
-        print(self.possiblearr1)
-        print('next')
-        print(self.possiblearr2)
-        print('next')
-        print(self.possiblearr3)
-        print('next')
-        print(self.possiblearr4)
-        print('next')
-        print(self.possiblearr5)
-        print('next')
-        print(self.possiblearr6)
-        print('next')
-        print(self.possiblearr7)
-        print('next')
-        print(self.possiblearr8)
-        print('next')
-        print(self.possiblearr9)
-        print('next')
-        print(self.possiblearr10)
+        self.myArr=  (self.possiblearr1  + self.possiblearr2 + self.possiblearr3 + self.possiblearr4 + self.possiblearr5 +self.possiblearr6 + self.possiblearr7+self.possiblearr8 +self.possiblearr9 +self.possiblearr10)
+        for value in self.myArr:
+            if value[0] =='0':
+            print(value)
+
+       
 
 
 if __name__=='__main__':
