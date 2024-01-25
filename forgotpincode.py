@@ -55,11 +55,11 @@ class passcode:
         #print(len(self.myArr))
         i=0
         for value in self.myArr:
-            if value[0] =='0': #no doofass starts witha zero
-                self.startZero[i]=value
-                i+=1
-        print(self.startZero)
-        print(len(self.startZero))
+            if value[0] =='0': #no doofass starts with a zero
+                self.myArr.remove(value)
+        
+        print(self.myArr)
+        print(len(self.myArr))
                 
             
         
