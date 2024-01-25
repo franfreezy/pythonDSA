@@ -48,7 +48,9 @@ class passcode:
             i10+=1
 
         
-            
+        myArr=  self.possiblearr1  + self.possiblearr2 + self.possiblearr3 + self.possiblearr4 
+        + self.possiblearr5 +self.possiblearr6 + self.possiblearr7
+        self.possiblearr8 +self.possiblearr9 +self.possiblearr10
         
         print('next')
         print(self.possiblearr1)
