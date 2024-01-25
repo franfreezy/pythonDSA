@@ -13,6 +13,7 @@ class passcode:
         self.possiblearr9=[None for i in range(self.maxIndex)]
         self.possiblearr10=[None for i in range(self.maxIndex)]
         self.myArr=[None for i in range(self.max_value)]
+        self.startZero=[None for i in range(self.maxIndex)]
     def possible(self):
         count=0
         i1=0
@@ -50,10 +51,18 @@ class passcode:
 
         
         self.myArr=  (self.possiblearr1  + self.possiblearr2 + self.possiblearr3 + self.possiblearr4 + self.possiblearr5 +self.possiblearr6 + self.possiblearr7+self.possiblearr8 +self.possiblearr9 +self.possiblearr10)
+        #print(self.myArr)
+        #print(len(self.myArr))
+        i=0
         for value in self.myArr:
-            if value[0] =='0':
-            print(value)
-
+            if value[0] =='0': #no doofass starts witha zero
+                self.startZero[i]=value
+                i+=1
+        print(self.startZero)
+        print(len(self.startZero))
+                
+            
+        
        
 
 
