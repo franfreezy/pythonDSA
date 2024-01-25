@@ -4,7 +4,7 @@ class passcode:
         self.possiblearr=[None for i in range(self.max_value)]
     
     def possible(self):
-        print(str())
+        print(str(self.max_value)+ ' trials ')
         print(self.possiblearr)
 
 
