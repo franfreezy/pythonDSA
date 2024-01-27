@@ -54,12 +54,12 @@ class passcode:
         #print(self.myArr)
         #print(len(self.myArr))
         i=0
+        newArr=[None for i in range(self.maxIndex)]
         for value in self.myArr:
             if value[0] =='0': #no doofass starts with a zero
-                print(value)
                 self.myArr.remove(value)
         
-        print(self.myArr)
+        print(newArr)
         print(len(self.myArr))
                 
             
