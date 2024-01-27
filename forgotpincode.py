@@ -59,7 +59,7 @@ class passcode:
             if value[0] =='0': #no doofass starts with a zero
                 self.myArr.remove(value)
         
-        print(newArr)
+        
         print(len(self.myArr))
                 
             
