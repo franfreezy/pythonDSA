@@ -28,6 +28,10 @@ class hashtable:
         h=value%self.max_value
         return h
 
+    def hashtableValues(self,key,value):
+        self.myArr[key]=value
+        return self.myArr
+
     def Tabletosequence(self,key,value):
         exactKey=self.hashfn(value)
         count=0
@@ -50,10 +54,10 @@ class hashtable:
 
 if __name__=='__main__':
     item=hashtable()
-    item.Tabletosequence(6,46)
-    item.Tabletosequence(2,42)
-    item.Tabletosequence(3,23)
-    item.Tabletosequence(5,52)
-    item.Tabletosequence(4,34)
-    item.Tabletosequence(7,33)
-    
+    item.hashtableValues(6,46)
+    item.hashtableValues(2,42)
+    item.hashtableValues(3,23)
+    item.hashtableValues(5,52)
+    item.hashtableValues(4,34)
+    item.new_arr=item.hashtableValues(7,33)
+    print(item.new_arr)
