@@ -32,23 +32,9 @@ class hashtable:
         self.myArr[key]=value
         return self.myArr
 
-    def Tabletosequence(self,key,value):
-        exactKey=self.hashfn(value)
-        count=0
-        myseqstr=''
-        if exactKey==key:
-            self.myArr[key]=value
-            return
-        while key !=exactKey:
-            
-            count+=1
-            key-=1
-            myseqstr += str(self.myArr[key])
-            
-        print(value,exactKey)
-        print(myseqstr)
-        print('count is :'+ str(count))
-        print(self.myArr)
+    def Tabletosequence(self,data):
+        for index,value in enumerate(self.new_arr): #enumerate allows us access both index and value
+            print(index,value)
 
 
 
@@ -61,3 +47,4 @@ if __name__=='__main__':
     item.hashtableValues(4,34)
     item.new_arr=item.hashtableValues(7,33)
     print(item.new_arr)
+    item.Tabletosequence(item.new_arr)
