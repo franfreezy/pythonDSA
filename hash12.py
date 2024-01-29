@@ -13,14 +13,17 @@ class matrixRotation:
 
     def rotate(self):
         self.inmatrix=self.inmatrix[::-1] #reverses order
-        print('HERE')
-        i=0
         
+        i=0
+        oldarr=[]
         while i!=3:
+            newarr=[]
             for array in self.inmatrix:
-                print(array[i] , end=' ')
+                newarr.append(array[i])
                 
-            print('space')
+                
+            oldarr.append(newarr)
+            print(oldarr)
             i+=1
         
             
