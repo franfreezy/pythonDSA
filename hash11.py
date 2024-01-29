@@ -19,13 +19,16 @@ class anagram():
     
     def sorter(self):
         my_dict=defaultdict(list) #this ensures that the sorted string is made key
-        
+        new_arr=[]
         for str in self.strs:
             sort=tuple(sorted(str))
             
             my_dict[sort].append(str)
-            print(my_dict)
-
+            
+       
+        for value in my_dict.values():
+            new_arr.append(value)
+        print(new_arr)
 if __name__=='__main__':
     strs = ["eat","tea","tan","ate","nat","bat"]
     item=anagram(strs)
