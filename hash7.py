@@ -34,7 +34,9 @@ class hashtable:
 
     def Tabletosequence(self,data):
         for index,value in enumerate(self.new_arr): #enumerate allows us access both index and value
-            print(index,value)
+            exactkey=self.hashfn(value)
+            key=index
+            print(key,exactkey)
 
 
 
