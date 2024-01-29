@@ -9,3 +9,17 @@
 
 #Input: strs = ["eat","tea","tan","ate","nat","bat"]
 #Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+##implementation
+class anagram():
+    def __init__(self,strs):
+        self.strs=strs
+    
+    def sorter(self):
+        for str in self.strs:
+            print(str)
+
+if __name__=='__main__':
+    strs = ["eat","tea","tan","ate","nat","bat"]
+    item=anagram(strs)
+    item.sorter()
