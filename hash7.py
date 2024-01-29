@@ -25,12 +25,18 @@ class hashtable:
     
     #we should take a key and value and give a sequence with linear probing in mind
     def hashfn(self,value):
-        h=value%max_value
+        h=value%self.max_value
         return h
+
     def Tabletosequence(self,key,value):
-        pass
+        exactKey=self.hashfn(value)
+        myArr=[None for i in range(self.max_value)]
+        if exactKey==key:
+            myArr[key]=value
+        print(myArr)
 
 
 if __name__=='__main__':
     item=hashtable()
+    item.Tabletosequence(6,46)
     
