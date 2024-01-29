@@ -26,8 +26,20 @@ class hashtable:
     def hashFn(self,myArr):
         for key in myArr:
             h=key%self.max_value
-            print(key)
-            print(h)
+            self.myArr[h]=key
+            print(h,key)
+            
+
+            while self.myArr[h] is not None:
+                h+=1
+                print('second')
+                print(h,key)
+                
+
+                
+
+        print( self.myArr)
+
 
 
 if __name__=='__main__':
