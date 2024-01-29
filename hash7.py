@@ -22,3 +22,15 @@ class hashtable:
     def __init__(self):
         self.max_value=10
         self.myArr=[None for i in range(self.max_value)]
+    
+    def hashFn(self,myArr):
+        for key in myArr:
+            h=key%self.max_value
+            print(key)
+            print(h)
+
+
+if __name__=='__main__':
+    item=hashtable()
+    myArr=[46, 42, 34, 52, 23, 33]
+    item.hashFn(myArr)
