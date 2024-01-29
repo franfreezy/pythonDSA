@@ -23,29 +23,11 @@ class hashtable:
         self.max_value=10
         self.myArr=[None for i in range(self.max_value)]
     
-    def hashFn(self,myArr):
-        for key in myArr:
-            h=key%self.max_value
-            
-            
-            
-                
-            while self.myArr[h] != None:
-                h+=1
-                print('here')
-            print( self.myArr)
-            print(h,key)
-            self.myArr[h]=key    
-                
-
-                
-
-        print( self.myArr)
-
+    #we should take a key and value and give a sequence with linear probing in mind
+    def Tabletosequence(self,key,value):
+        pass
 
 
 if __name__=='__main__':
     item=hashtable()
-    myArr=[46, 42, 34, 52, 23, 33]#this array is the answer to the question therefore our implementation isn't what is asked for
-    #in this case we are given the hash table and asked for the sequence
-    item.hashFn(myArr)
+    
