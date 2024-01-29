@@ -31,13 +31,18 @@ class hashtable:
     def Tabletosequence(self,key,value):
         exactKey=self.hashfn(value)
         count=0
+        myseqstr=''
         if exactKey==key:
             self.myArr[key]=value
             return
         while key !=exactKey:
-            print('here')
+            
             count+=1
             key-=1
+            myseqstr += str(self.myArr[key])
+            
+        print(value,exactKey)
+        print(myseqstr)
         print('count is :'+ str(count))
         print(self.myArr)
 
@@ -49,6 +54,6 @@ if __name__=='__main__':
     item.Tabletosequence(2,42)
     item.Tabletosequence(3,23)
     item.Tabletosequence(5,52)
-    #item.Tabletosequence(4,34)
-    #item.Tabletosequence(7,33)
+    item.Tabletosequence(4,34)
+    item.Tabletosequence(7,33)
     
