@@ -33,10 +33,17 @@ class hashtable:
         return self.myArr
 
     def Tabletosequence(self,data):
+        seqstr=''
+        sortingArr=[]
         for index,value in enumerate(self.new_arr): #enumerate allows us access both index and value
             if value is not None:
                 exactkey=self.hashfn(value)
                 print(index,value,exactkey)
+                if exactkey==index:
+                    sortingArr.append(value)
+                
+
+                print(sortingArr)
 
 
 
