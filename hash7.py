@@ -26,14 +26,16 @@ class hashtable:
     def hashFn(self,myArr):
         for key in myArr:
             h=key%self.max_value
-            self.myArr[h]=key
-            print(h,key)
             
-
-            while self.myArr[h] is not None:
+            
+            
+                
+            while self.myArr[h] != None:
                 h+=1
-                print('second')
-                print(h,key)
+                print('here')
+            print( self.myArr)
+            print(h,key)
+            self.myArr[h]=key    
                 
 
                 
@@ -44,5 +46,6 @@ class hashtable:
 
 if __name__=='__main__':
     item=hashtable()
-    myArr=[46, 42, 34, 52, 23, 33]
+    myArr=[46, 42, 34, 52, 23, 33]#this array is the answer to the question therefore our implementation isn't what is asked for
+    #in this case we are given the hash table and asked for the sequence
     item.hashFn(myArr)
