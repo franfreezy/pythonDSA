@@ -12,4 +12,11 @@ class matrixRotation:
         self.inmatrix=inmatrix
 
     def rotate(self):
-        pass
+        self.inmatrix=self.inmatrix[::-1] #reverses order
+        for array in self.inmatrix:
+            print(array)
+
+if __name__=='__main__':
+    inmatrix= [[1,2,3],[4,5,6],[7,8,9]]
+    item=matrixRotation(inmatrix)
+    item.rotate()
