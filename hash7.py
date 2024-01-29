@@ -24,6 +24,9 @@ class hashtable:
         self.myArr=[None for i in range(self.max_value)]
     
     #we should take a key and value and give a sequence with linear probing in mind
+    def hashfn(self,value):
+        h=value%max_value
+        return h
     def Tabletosequence(self,key,value):
         pass
 
