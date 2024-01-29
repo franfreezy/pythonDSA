@@ -35,6 +35,7 @@ class hashtable:
         for word in count:
             sorted_string=tuple(sorted(word))
             self.my_dict[sorted_string].append(word)
+        
                
         for value in  self.my_dict.values():
             new_arr.append(value)  

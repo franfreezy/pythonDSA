@@ -11,13 +11,20 @@
 #Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 ##implementation
+from collections import defaultdict
 class anagram():
     def __init__(self,strs):
         self.strs=strs
+
     
     def sorter(self):
+        my_dict=defaultdict(list) #this ensures that the sorted string is made key
+        
         for str in self.strs:
-            print(str)
+            sort=tuple(sorted(str))
+            
+            my_dict[sort].append(str)
+            print(my_dict)
 
 if __name__=='__main__':
     strs = ["eat","tea","tan","ate","nat","bat"]
