@@ -41,6 +41,9 @@ class hashtable:
                 print(index,value,exactkey)
                 if exactkey==index:
                     sortingArr.append(value)
+                    seqstr+=str(value)+'-->'
+                    return
+                
                 
 
                 print(sortingArr)
