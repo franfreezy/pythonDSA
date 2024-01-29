@@ -15,10 +15,10 @@ class matrixRotation:
         self.inmatrix=self.inmatrix[::-1] #reverses order
         print('HERE')
         i=0
-        new_arr=[]
+        
         while i!=3:
             for array in self.inmatrix:
-                print(array[i])
+                print(array[i] , end=' ')
                 
             print('space')
             i+=1
