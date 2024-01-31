@@ -11,7 +11,7 @@
 #orders = ['pizza','samosa','pasta','biryani','burger']
 #This problem is a producer,consumer problem where place_order thread is producing orders 
 # whereas server_order thread is consuming the food orders. Use Queue class implemented in a video tutorial.
-
+from collections import deque
 class queue:
     def __init__(self):
-        pass
+        self.container=deque()
