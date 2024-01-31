@@ -12,7 +12,8 @@
 #This problem is a producer,consumer problem where place_order thread is producing orders 
 # whereas server_order thread is consuming the food orders. Use Queue class implemented in a video tutorial.
 from collections import deque
-
+import threading
+import time
 # queue works on the FIFO basis
 
 class queue:
@@ -20,16 +21,37 @@ class queue:
         self.container=deque()
 
     def AddQueue(self,data):
+        
         self.container.appendleft(data)
-        return list(self.container) #converts to a list removes deque(['frandel', 'jane']) to ['frandel']
+        return list(self.container) 
 
     def pop(self):
-        self.container.pop()
-        return list(self.container)
+        container_copy = deque(self.container)
+        for data in container_copy:
+            
+            self.container.pop()
+            time.sleep(2)
+            
+        print(list(self.container))
 
+    def qnqueue(self,data):
+        for value in data:
+            self.AddQueue(value)
+            time.sleep(0.5)
+        print(list(self.container))
 
 if __name__=='__main__':
     item=queue()
-    item.AddQueue('jane')
-    print(item.AddQueue('frandel'))
-    print(item.pop())
+    orders = ['pizza','samosa','pasta','biryani','burger']
+    
+    
+    #two threads
+    place_order=threading.Thread(target=item.qnqueue,args=(orders, ))
+    serve_order=threading.Thread(target=item.pop)
+
+    place_order.start()
+    time.sleep(1)
+    serve_order.start()
+
+    place_order.join()
+    serve_order.join()
