@@ -28,6 +28,7 @@ class queue:
     def pop(self):
         if len(self.container)==0:
             print('no orders placed')
+
             return
         return self.container.pop()
 

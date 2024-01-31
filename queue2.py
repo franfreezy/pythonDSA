@@ -15,3 +15,13 @@
 
 #You also need to add front() function in queue class that can return the front element 
 # in the queue.
+
+class queue:
+   def __init__(self):
+      self.container=deque()
+
+   def front(self):
+      if len(self.container)==0:
+         print('empty queue')
+         return
+      return self.container.pop()
