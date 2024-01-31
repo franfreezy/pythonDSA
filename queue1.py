@@ -34,20 +34,24 @@ class queue:
             
         print(list(self.container))
 
-    def qnqueue(self,data):
-        for value in data:
-            self.AddQueue(value)
-            time.sleep(0.5)
-        print(list(self.container))
 
+item=queue()
+
+def place_order(orders):
+    for order in orders:
+        item.AddQueue(order)
+        time.sleep(0.5)
+    
+def serve_order():
+    
 if __name__=='__main__':
-    item=queue()
+    
     orders = ['pizza','samosa','pasta','biryani','burger']
     
     
     #two threads
-    place_order=threading.Thread(target=item.qnqueue,args=(orders, ))
-    serve_order=threading.Thread(target=item.pop)
+    t1=threading.Thread(target=item.qnqueue,args=(orders, ))
+    t2=threading.Thread(target=item.pop)
 
     place_order.start()
     time.sleep(1)
