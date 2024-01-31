@@ -48,7 +48,7 @@ def produce_binary_numbers(n):
 
     for i in range(n):
         front = numbers_queue.front()
-        #print("   ", front)
+        print("   ", front)
         
         numbers_queue.enqueue(front + "0")
         
