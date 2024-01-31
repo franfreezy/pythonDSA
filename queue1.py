@@ -26,36 +26,40 @@ class queue:
         return list(self.container) 
 
     def pop(self):
-        container_copy = deque(self.container)
-        for data in container_copy:
-            
-            self.container.pop()
-            time.sleep(2)
-            
-        print(list(self.container))
+        if len(self.container)==0:
+            print('no orders placed')
+            return
+        return self.container.pop()
 
 
 item=queue()
 
 def place_order(orders):
     for order in orders:
+        print('order for: ', order)
         item.AddQueue(order)
         time.sleep(0.5)
     
 def serve_order():
-    
+    time.sleep(1)#this thread starts 1 sec after place order
+    while True:
+        
+        order=item.pop()
+        print('serving: ', order )
+        time.sleep(2)
+
 if __name__=='__main__':
     
     orders = ['pizza','samosa','pasta','biryani','burger']
     
     
     #two threads
-    t1=threading.Thread(target=item.qnqueue,args=(orders, ))
-    t2=threading.Thread(target=item.pop)
+    t1=threading.Thread(target=place_order,args=(orders, ))
+    t2=threading.Thread(target=serve_order)
 
-    place_order.start()
-    time.sleep(1)
-    serve_order.start()
+    t1.start()
+    
+    t2.start()
 
-    place_order.join()
-    serve_order.join()
+    #place_order.join()
+    #serve_order.join()
