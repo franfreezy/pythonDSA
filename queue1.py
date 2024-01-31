@@ -12,6 +12,18 @@
 #This problem is a producer,consumer problem where place_order thread is producing orders 
 # whereas server_order thread is consuming the food orders. Use Queue class implemented in a video tutorial.
 from collections import deque
+
+# queue works on the FIFO basis
+
 class queue:
     def __init__(self):
         self.container=deque()
+
+    def AddQueue(self,data):
+        self.container.appendleft(data)
+        return self.container
+
+if __name__=='__main__':
+    item=queue()
+    item.AddQueue('jane')
+    print(item.AddQueue('frandel'))
