@@ -23,7 +23,13 @@ class queue:
         self.container.appendleft(data)
         return self.container
 
+    def pop(self):
+        self.container.pop()
+        return self.container
+
+
 if __name__=='__main__':
     item=queue()
     item.AddQueue('jane')
     print(item.AddQueue('frandel'))
+    print(item.pop())
