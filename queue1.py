@@ -21,11 +21,11 @@ class queue:
 
     def AddQueue(self,data):
         self.container.appendleft(data)
-        return self.container
+        return list(self.container) #converts to a list removes deque(['frandel', 'jane']) to ['frandel']
 
     def pop(self):
         self.container.pop()
-        return self.container
+        return list(self.container)
 
 
 if __name__=='__main__':
