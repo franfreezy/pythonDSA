@@ -35,7 +35,9 @@ class queue:
 item=queue()
 
 def place_order(orders):
+    
     for order in orders:
+       
         print('order for: ', order)
         item.AddQueue(order)
         time.sleep(0.5)
@@ -60,6 +62,5 @@ if __name__=='__main__':
     t1.start()
     
     t2.start()
-
-    #place_order.join()
-    #serve_order.join()
+   
+    
