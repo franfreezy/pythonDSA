@@ -27,16 +27,32 @@ class queue:
         
         return self.container.pop()
     
-item=queue()
+    def dequeue_item(self,value):
+        try:
+            self.container.remove(value)
+        except ValueError:
+            print('item not found')
+
+item1=queue()
+item2=queue()
 
 def sorting_add(colorArray):
     for color in colorArray:
-        item.enqueue(color)
-    return list(item.container)
+        item1.enqueue(color)
+    return list(item1.container)
 
-def sorting_remove(primaryColours):
-    for color in item.container:
-        print(color)
+def sorting_remove():
+    #print(primaryColours[0::])
+   
+    for color in list(item1.container):
+        if color != 'Red' and color !=  'Green' and color != 'Blue':
+            item2.enqueue(color)
+            item1.dequeue_item(color)
+            
+    
+
+    return list(item2.container),list(item1.container)
+   
 
 if __name__=='__main__':
     colorArray = [
@@ -51,6 +67,6 @@ if __name__=='__main__':
   'Steel', 'Tan', 'Crimson', 'Mauve', 'Sunset', 'Sky', 'Forest',
   'Ocean', 'Fire', 'Earth', 'Sand', 'Clay', 'Snow', 'Smoke', 'Coal'
 ]
-primaryColours=['Red', 'Green' , 'Blue']
-print(sorting_add(colorArray))
-sorting_remove(primaryColours)
+
+sorting_add(colorArray)
+print(sorting_remove())
