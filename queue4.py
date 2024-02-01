@@ -4,4 +4,14 @@
 
 class queue:
     def __init__(self):
-        pass
+        self.myarray=[]
+
+    def addtoQueue(self,value):
+        self.myarray.insert(0,value)
+        return self.myarray
+
+
+item=queue()
+
+if __name__== "__main__":
+    print(item.addtoQueue(2))
