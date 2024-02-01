@@ -11,19 +11,6 @@
 ########################################################################################
 from collections import deque
 
-colorArray = [
-  'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet',
-  'White', 'Black', 'Gray', 'Brown', 'Pink', 'Purple', 'Turquoise',
-  'Lavender', 'Cyan', 'Magenta', 'Maroon', 'Navy', 'Olive', 'Teal',
-  'Peach', 'Beige', 'Gold', 'Silver', 'Bronze', 'Turquoise', 'Rose',
-  'Ruby', 'Emerald', 'Sapphire', 'Amethyst', 'Topaz', 'Pearl', 'Opal',
-  'Coral', 'Aqua', 'Lime', 'Lemon', 'Tangerine', 'Plum', 'Cherry',
-  'Chocolate', 'Mint', 'Slate', 'Charcoal', 'Ivory', 'Periwinkle',
-  'Azure', 'Cerulean', 'Mustard', 'Burgundy', 'Salmon', 'Sienna',
-  'Steel', 'Tan', 'Crimson', 'Mauve', 'Sunset', 'Sky', 'Forest',
-  'Ocean', 'Fire', 'Earth', 'Sand', 'Clay', 'Snow', 'Smoke', 'Coal'
-]
-primaryColours=['Red', 'Green' , 'Blue']
 
 class queue:
     def __init__(self):
@@ -39,4 +26,31 @@ class queue:
             return
         
         return self.container.pop()
-        
+    
+item=queue()
+
+def sorting_add(colorArray):
+    for color in colorArray:
+        item.enqueue(color)
+    return list(item.container)
+
+def sorting_remove(primaryColours):
+    for color in item.container:
+        print(color)
+
+if __name__=='__main__':
+    colorArray = [
+  'Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet',
+  'White', 'Black', 'Gray', 'Brown', 'Pink', 'Purple', 'Turquoise',
+  'Lavender', 'Cyan', 'Magenta', 'Maroon', 'Navy', 'Olive', 'Teal',
+  'Peach', 'Beige', 'Gold', 'Silver', 'Bronze', 'Turquoise', 'Rose',
+  'Ruby', 'Emerald', 'Sapphire', 'Amethyst', 'Topaz', 'Pearl', 'Opal',
+  'Coral', 'Aqua', 'Lime', 'Lemon', 'Tangerine', 'Plum', 'Cherry',
+  'Chocolate', 'Mint', 'Slate', 'Charcoal', 'Ivory', 'Periwinkle',
+  'Azure', 'Cerulean', 'Mustard', 'Burgundy', 'Salmon', 'Sienna',
+  'Steel', 'Tan', 'Crimson', 'Mauve', 'Sunset', 'Sky', 'Forest',
+  'Ocean', 'Fire', 'Earth', 'Sand', 'Clay', 'Snow', 'Smoke', 'Coal'
+]
+primaryColours=['Red', 'Green' , 'Blue']
+print(sorting_add(colorArray))
+sorting_remove(primaryColours)
