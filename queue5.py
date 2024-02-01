@@ -10,5 +10,18 @@ class queue:
         return list(self.container)
 
     def dequeue(self):
-        value=self.container.pop()
-        return value
+        if self.size==0:
+            return 'queue is empty'
+
+        self.value=self.container.pop()
+        return self.value
+    def size(self):
+        return len(self.container)
+
+    def reverse(self):
+        pass
+item=queue()
+
+
+if __name__=='__main__':
+    pass
