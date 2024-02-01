@@ -8,3 +8,7 @@ class queue:
     def enqueue(self,value):
         self.container.appendleft(value)
         return list(self.container)
+
+    def dequeue(self):
+        value=self.container.pop()
+        return value
