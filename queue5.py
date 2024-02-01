@@ -42,6 +42,8 @@ if __name__=='__main__':
     item.enqueue(2)
    
     item.enqueue(23)
+    item.enqueue(23)
+    item.enqueue(9)
     print(item.enqueue(20))
     
     print(item.reverse())
