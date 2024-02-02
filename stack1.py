@@ -8,12 +8,12 @@ class stack:
     def __init__(self):
         self.container=deque()
 
-    def enqueue(self,data):
+    def push(self,data):
         self.container.append(data)
 
         return list(self.container)
 
-    def dequeue(self):
+    def pop(self):
         return self.container.pop()
 
 item1=stack()
@@ -22,11 +22,11 @@ item1=stack()
 def string_reverse(string):
     
     for str in string:
-        item1.enqueue(str)
+        item1.push(str)
     rev_str=''    
     for value in list(item1.container):
         
-        val=item1.dequeue()
+        val=item1.pop()
         rev_str+=val
     print(rev_str)
         
