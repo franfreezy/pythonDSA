@@ -18,3 +18,8 @@ class stack:
 
     def pop(self):
         return self.container.pop()
+
+item=stack()
+def parenthesis_checker():
+    while len(item.container!=0):
+        pass
