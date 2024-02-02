@@ -2,7 +2,7 @@
 # Use Stack class from the tutorial.
 #reverse_string("We will conquere COVID-19") should return "91-DIVOC ereuqnoc lliw eW"
 
-from collectons import deque
+from collections import deque
 
 class stack:
     def __init__(self):
@@ -12,3 +12,24 @@ class stack:
         self.container.append(data)
 
         return list(self.container)
+
+    def dequeue(self):
+        return self.container.pop()
+
+item1=stack()
+
+
+def string_reverse(string):
+    
+    for str in string:
+        item1.enqueue(str)
+    rev_str=''    
+    for value in list(item1.container):
+        
+        val=item1.dequeue()
+        rev_str+=val
+    print(rev_str)
+        
+    
+string="We will conquere COVID-19"
+string_reverse(string)
