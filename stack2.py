@@ -21,19 +21,7 @@ class stack:
 
 item=stack()
 def parenthesis_checker(string):
-    lstr=''
-    for str in string:
-        item.push(str)
-
-    while len(item.container)!=0:
-        val=item.pop()
-        if val== '{' or val== '}' or val== '['or val== ']' or val== '(' or  val== ')':
-            lstr+=val
-    
-    if lstr[0]=='{' or lstr[0]=='['  or lstr[0]=='(':
-        return('unbalanced')
-        
-    #print(lstr[0])
+    pass  ##hve to think outside the box
 
 #string ="({a+b})"
 string ="))((a+b}{"
