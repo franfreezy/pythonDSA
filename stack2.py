@@ -20,6 +20,24 @@ class stack:
         return self.container.pop()
 
 item=stack()
-def parenthesis_checker():
-    while len(item.container!=0):
-        pass
+def parenthesis_checker(string):
+    lstr=''
+    for str in string:
+        item.push(str)
+
+    while len(item.container)!=0:
+        val=item.pop()
+        if val== '{' or val== '}' or val== '['or val== ']' or val== '(' or  val== ')':
+            lstr+=val
+    
+    #if lstr[0]=='{' or lstr[0]=='['  or lstr[0]=='(':
+        #print(lstr)
+        
+    print(lstr[0])
+
+#string ="({a+b})"
+#string ="))((a+b}{"
+#string ="))"
+string ="((a+b))"
+#string ="[a+b]*(x+2y)*{gg+kk}"
+parenthesis_checker(string)
