@@ -30,14 +30,14 @@ def parenthesis_checker(string):
         if val== '{' or val== '}' or val== '['or val== ']' or val== '(' or  val== ')':
             lstr+=val
     
-    #if lstr[0]=='{' or lstr[0]=='['  or lstr[0]=='(':
-        #print(lstr)
+    if lstr[0]=='{' or lstr[0]=='['  or lstr[0]=='(':
+        return('unbalanced')
         
-    print(lstr[0])
+    #print(lstr[0])
 
 #string ="({a+b})"
-#string ="))((a+b}{"
+string ="))((a+b}{"
 #string ="))"
-string ="((a+b))"
+#string ="((a+b))"
 #string ="[a+b]*(x+2y)*{gg+kk}"
 parenthesis_checker(string)
