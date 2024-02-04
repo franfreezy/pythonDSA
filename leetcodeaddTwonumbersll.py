@@ -28,6 +28,21 @@ class linked_list:
     def print(self):
         if self.head is None:
             print('linked list is empty')
+            return
+        itr=self.head
+        linked_liststr=''
+        while itr:
+            linked_liststr+=itr
+            itr=itr.next
+        print(linked_liststr)
 
+item=linked_list()
+ 
+if __name__=='__main__':
+    item.append(23)
+    item.append(4)
+    item.append(5)
+    item.append(8)
+    item.print()
 
         
