@@ -24,10 +24,15 @@ class conversion:
     def __init__(self):
         self.value=None
     
-    def operations(self,value):
+    def operation1(self,value):
         count=0
         for str in value:
-            pass
+            
+
+            print(str)
+        print(' ')
+        
+        
 
         
 
@@ -140,10 +145,10 @@ roman_numerals = [
 ]
 item=conversion()
 def convert(roman_numerals):
-    for Roman in roman_numerals[:10]:
+    for Roman in roman_numerals:
         string=Roman
         string=string.upper()
-        print(string)
-        item.operations(string)
+        if len(string)<4:
+            item.operation1(string)
 
 convert(roman_numerals)
