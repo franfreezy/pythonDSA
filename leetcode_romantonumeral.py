@@ -71,7 +71,7 @@ class conversion:
                     count+=500
                 if str =='M':
                     count+=1000    
-
+            #print(str)
             #print(count)
 
 
@@ -193,7 +193,7 @@ def convert(roman_numerals):
     for Roman in roman_numerals:
         string=Roman
         string=string.upper()
-        if len(string)<4:
+        if len(string)<=5:
             item.operation1(string)
 
 convert(roman_numerals)
