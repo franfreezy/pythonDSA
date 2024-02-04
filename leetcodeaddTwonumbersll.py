@@ -4,7 +4,7 @@ and each of their nodes contains a single digit. Add the two numbers and return 
 
 You may assume the two numbers do not contain any leading zero, except the number 0 itself.'''
 
-class node:
+class Node:
     def __init__(self,data,next):
         self.data=data
         self.next=next
@@ -13,3 +13,21 @@ class linked_list:
     def __init__(self,head,tail):
         self.head=None
         self.tail=None
+    def append(self,data):
+        if self.head is None:
+            self.head=Node(data,None)
+            return
+        
+        itr=self.head
+        while itr.next:
+            itr=itr.next
+
+        node=Node(data,None)
+        itr.next=node
+
+    def print(self):
+        if self.head is None:
+            print('linked list is empty')
+
+
+        
