@@ -74,14 +74,22 @@ class conversion:
                         continue
                     count+=100
                 if str =='D':
+                    if value[index-1]=='C' and index!=0:
+                        
+                        count+=300
+                        continue
                     count+=500
                 if str =='M':
+                    if value[index-1]=='C' and index!=0:
+                        
+                        count+=800
+                        continue
                     count+=1000    
             #print(str)
             #print(count)
 
 
-        print(value, count)
+        print(count)
         
         
 
@@ -199,7 +207,7 @@ def convert(roman_numerals):
     for Roman in roman_numerals:
         string=Roman
         string=string.upper()
-        if len(string)<=9:
-            item.operation1(string)
+        
+        item.operation1(string)
 
 convert(roman_numerals)
