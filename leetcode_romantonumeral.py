@@ -61,9 +61,11 @@ class conversion:
                         break
                     count+=10
                 if str =='L':
+                    
                     if value[index-1]=='X' and index!=0:
+                        print(index)
                         count+=30
-                        break
+                        continue
                     count+=50
                 if str =='C':
                     count+=100
