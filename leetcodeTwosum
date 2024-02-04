@@ -6,14 +6,19 @@ class Solution:
         for index,num in enumerate(nums):
             
             if num >target:
-                continue
-
-            if num< target:
                 difference=target-num
                 if difference  in nums[index+1:]:
                     diff_index = nums[index+1:].index(difference) + index + 1
-                    print(num,index)
-                    print(difference,diff_index)
+                   
+                    print([index,diff_index])
+                
+
+            if num<= target:
+                difference=target-num
+                if difference  in nums[index+1:]:
+                    diff_index = nums[index+1:].index(difference) + index + 1
+                   
+                    print([index,diff_index])
                 
                 
                 
@@ -25,6 +30,7 @@ class Solution:
                 
 
 item=Solution()
+nums=[-1,-2,-3,-4,-5]
 #nums =[3,3]
-nums = [2,7,11,15]
-item.twoSum(nums,9)
+#nums = [2,7,11,15]
+item.twoSum(nums,-8)
