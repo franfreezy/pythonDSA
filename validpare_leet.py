@@ -19,3 +19,6 @@ Example 3:
 
 Input: s = "(]"
 Output: false '''
+class Solution:
+    def isValid(self, s: str) -> bool:
+        pass
