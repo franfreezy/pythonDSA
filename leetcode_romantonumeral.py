@@ -52,13 +52,13 @@ class conversion:
                 if str=='V' :
                     if value[index-1]=='I' and index!=0:
                         count+=3
-                        break
+                        continue
                     
                     count+=5
                 if str=='X' :
                     if value[index-1]=='I' and index!=0:
                         count+=8
-                        break
+                        continue
                     count+=10
                 if str =='L':
                     
@@ -68,6 +68,10 @@ class conversion:
                         continue
                     count+=50
                 if str =='C':
+                    if value[index-1]=='X' and index!=0:
+                        
+                        count+=80
+                        continue
                     count+=100
                 if str =='D':
                     count+=500
