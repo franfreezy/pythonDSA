@@ -193,7 +193,7 @@ def convert(roman_numerals):
     for Roman in roman_numerals:
         string=Roman
         string=string.upper()
-        if len(string)<=5:
+        if len(string)<=7:
             item.operation1(string)
 
 convert(roman_numerals)
