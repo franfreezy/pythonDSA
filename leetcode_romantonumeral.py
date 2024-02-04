@@ -30,6 +30,7 @@ class conversion:
             if len(value)==1:
                 if str =='I':
                     count=1
+                
                 if str =='V':
                     count=5
                 if str =='X':
@@ -42,7 +43,15 @@ class conversion:
                     count=500
                 if str =='M':
                     count=1000
-            
+                
+            else:
+                if str=='I' and count<4:
+                    count+=1
+                    
+
+            #print(count)
+
+
         print(value, count)
         
         
