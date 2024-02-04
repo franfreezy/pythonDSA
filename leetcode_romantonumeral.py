@@ -63,7 +63,7 @@ class conversion:
                 if str =='L':
                     
                     if value[index-1]=='X' and index!=0:
-                        print(index)
+                        
                         count+=30
                         continue
                     count+=50
@@ -195,7 +195,7 @@ def convert(roman_numerals):
     for Roman in roman_numerals:
         string=Roman
         string=string.upper()
-        if len(string)<=7:
+        if len(string)<=8:
             item.operation1(string)
 
 convert(roman_numerals)
