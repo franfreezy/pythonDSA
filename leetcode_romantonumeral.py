@@ -31,16 +31,24 @@ class conversion:
                 count+=1
                 return
             if str=='V':
+                if count==0:
+                    count+=5
+                    return
                 pass
             if str=='X':
+                if count==0:
                 pass
             if str=='L':
+                if count==0:
                 pass
             if str=='C':
+                if count==0:
                 pass
             if str=='D':
+                if count==0:
                 pass
             if str=='M':
+                if count==0:
                 pass
 
         print(count)
