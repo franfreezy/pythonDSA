@@ -10,7 +10,7 @@ class Node:
         self.next=next
 
 class linked_list:
-    def __init__(self,head,tail):
+    def __init__(self):
         self.head=None
         self.tail=None
     def append(self,data):
@@ -32,7 +32,7 @@ class linked_list:
         itr=self.head
         linked_liststr=''
         while itr:
-            linked_liststr+=itr
+            linked_liststr+=str(itr.data) +'---'
             itr=itr.next
         print(linked_liststr)
 
