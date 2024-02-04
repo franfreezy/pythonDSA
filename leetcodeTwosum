@@ -9,7 +9,8 @@ class Solution:
                 continue
             if num< target:
                 difference=target-num
-                print(nums[index],num,index)
+                if difference in nums:
+                    print(difference,index)
                 
                 
                     
