@@ -19,3 +19,38 @@ I can be placed before V (5) and X (10) to make 4 and 9.
 X can be placed before L (50) and C (100) to make 40 and 90. 
 C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.'''
+
+class conversion:
+    def __init__(self):
+        self.value=None
+    
+    def operations(self,value):
+        count=0
+        for str in value:
+            if str=='I':
+                count+=1
+                return
+            if str=='V':
+                pass
+            if str=='X':
+                pass
+            if str=='L':
+                pass
+            if str=='C':
+                pass
+            if str=='D':
+                pass
+            if str=='M':
+                pass
+
+        print(count)
+
+
+
+Roman=input('Enter the Roman Number: ')
+item=conversion()
+def convert(Roman):
+    string=Roman
+    string=string.upper()
+    item.operations(string)
+convert(Roman)
