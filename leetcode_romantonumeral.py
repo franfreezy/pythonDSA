@@ -30,6 +30,7 @@ class conversion:
             if len(value)==1:
                 if str =='I':
                     count=1
+                    
                 
                 if str =='V':
                     count=5
@@ -47,11 +48,22 @@ class conversion:
             else:
                 if str=='I' :
                     count+=1
+                    
                 if str=='V' :
+                    if value[index-1]=='I' and index!=0:
+                        count+=3
+                        break
+                    
                     count+=5
                 if str=='X' :
+                    if value[index-1]=='I' and index!=0:
+                        count+=8
+                        break
                     count+=10
                 if str =='L':
+                    if value[index-1]=='X' and index!=0:
+                        count+=30
+                        break
                     count+=50
                 if str =='C':
                     count+=100
