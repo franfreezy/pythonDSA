@@ -34,22 +34,27 @@ class conversion:
                 if count==0:
                     count+=5
                     return
-                pass
+                
             if str=='X':
                 if count==0:
-                pass
+                    count+=10
+                
             if str=='L':
                 if count==0:
-                pass
+                    count+=50
+                
             if str=='C':
                 if count==0:
-                pass
+                    count+=100
+                
             if str=='D':
                 if count==0:
-                pass
+                    count+=500
+                
             if str=='M':
                 if count==0:
-                pass
+                    count+=1000
+                
 
         print(count)
 
