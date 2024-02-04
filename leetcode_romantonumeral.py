@@ -27,10 +27,23 @@ class conversion:
     def operation1(self,value):
         count=0
         for str in value:
+            if len(value)==1:
+                if str =='I':
+                    count=1
+                if str =='V':
+                    count=5
+                if str =='X':
+                    count=10
+                if str =='L':
+                    count=50
+                if str =='C':
+                    count=100
+                if str =='D':
+                    count=500
+                if str =='M':
+                    count=1000
             
-
-            print(str)
-        print(' ')
+        print(value, count)
         
         
 
