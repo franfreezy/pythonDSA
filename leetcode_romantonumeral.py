@@ -45,10 +45,12 @@ class conversion:
                     count=1000
                 
             else:
-                if str=='I' and count<10:
+                if str=='I' :
                     count+=1
-                if str=='V' and count<10:
+                if str=='V' :
                     count+=5
+                if str=='X' :
+                    count+=10
                     
 
             #print(count)
