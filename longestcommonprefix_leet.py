@@ -24,12 +24,10 @@ strs[i] consists of only lowercase English letters.'''
 from collections import defaultdict
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
-        my_dict=defaultdict(list)
-        for str in strs:
-            first_letter=str[0]
-            
-            my_dict[str[0]].append(str)
-        print(my_dict)
+        pass
+           
+       
+        
 strs = ["flower","flow","flight"]
 item=Solution()
 item.longestCommonPrefix(strs)
