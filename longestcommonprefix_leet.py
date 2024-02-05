@@ -27,15 +27,10 @@ class Solution:
         my_dict=defaultdict(list)
         i=0
         key=''
+        size=len(strs)
         for str in strs:
-            key+=str[i]
-            my_dict[key].append(str)
-           
-            if len(my_dict)>1:
-                print(' ')
-            else:
-                print('safe')
-        
+            pass
 strs = ["flower","flow","flight"]
+#strs = ["dog","racecar","car"]
 item=Solution()
 item.longestCommonPrefix(strs)
