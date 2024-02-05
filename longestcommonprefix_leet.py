@@ -25,8 +25,16 @@ from collections import defaultdict
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         my_dict=defaultdict(list)
+        i=0
+        key=''
+        for str in strs:
+            key+=str[i]
+            my_dict[key].append(str)
            
-       
+            if len(my_dict)>1:
+                print(' ')
+            else:
+                print('safe')
         
 strs = ["flower","flow","flight"]
 item=Solution()
