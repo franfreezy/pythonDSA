@@ -20,6 +20,16 @@ Constraints:
 1 <= strs.length <= 200
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters.'''
+
+from collections import defaultdict
 class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        pass
+    def longestCommonPrefix(self, strs: list[str]) -> str:
+        my_dict=defaultdict(list)
+        for str in strs:
+            first_letter=str[0]
+            
+            my_dict[str[0]].append(str)
+        print(my_dict)
+strs = ["flower","flow","flight"]
+item=Solution()
+item.longestCommonPrefix(strs)
