@@ -28,10 +28,18 @@ class Solution:
         i=0
         key=''
         size=len(strs)
-        while len():
-            print(strs)
+        while len(my_dict)<=1:
+
+            for str in strs:
+                if str[i]
+                key=str[i]
+                my_dict[key].append(str)
+            
+            
         
-        print(my_dict)
+            
+        
+        
 strs = ["flower","flow","flight"]
 #strs = ["dog","racecar","car"]
 item=Solution()
