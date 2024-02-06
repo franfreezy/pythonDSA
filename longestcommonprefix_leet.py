@@ -46,7 +46,16 @@ class Solution:
 
 
                     else:
-                        
+                        if len(key)==len(str) :
+                            if key==str[:i]:
+                                print('here1')
+                                return key
+                            else:
+                                if key[:-1]==str[:i]:
+                                    print(key)
+
+                                    my_dict[key[:-1]].append(str)
+                                    
 
                         if key[:-1]==str[:i]:
 
@@ -55,13 +64,12 @@ class Solution:
                             return value[0]
 
 
-                print(i)
+                
 
                 if i<len(str)-1:
-                    pass
+                    i+=1
+                    key+=str[i]  
                 
-                i+=1
-                key+=str[i]  
                     
                 
                 value=(list(my_dict.keys()))
@@ -77,8 +85,8 @@ class Solution:
             
         
         
-strs = ["flower","flow","flight"]
+#strs = ["cir","car"]
 #strs = ["dog","racecar","car"]
-#strs =["floweryttt","floweryttt","flower","flower"]
+strs =["flower","flower","flower","flower"]
 item=Solution()
 print(item.longestCommonPrefix(strs))
