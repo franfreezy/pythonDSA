@@ -29,30 +29,40 @@ class Solution:
         key=strs[0][0]
         size=len(strs)
         
-        while len(my_dict)<=1 and i<3:
+        while len(my_dict)<=1 :
             #print(key)
             for str in strs:
-                if str[i]==key:
+                if len(key)<=1:
+                    if str[i]==key:
                     
-                    my_dict[key].append(str)
+                        my_dict[key].append(str)
                     
-                else:
                     if str[i]!=key:
                         print('" "')
-                        break
-                    if key==str[0:i]:
-                        print(key)
+                        return
+                
+                    
+                else:
+                    
+                    if key[:-1]==str[:i]:
+                        
+                        my_dict[key[:-1]].append(str)
+                    else:
+                        return
+                
 
 
                 
 
             i+=1  
             key+=str[i]
-            #print(key)    
+             
+            value=(list(my_dict.keys()))
+            print(value)
+            my_dict=defaultdict(list)   
                 
-                
-            
-            print (my_dict)
+        print(value)
+        
             
         
             
