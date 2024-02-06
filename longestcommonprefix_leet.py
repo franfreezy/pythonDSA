@@ -36,9 +36,13 @@ class Solution:
 
                 for str in strs:
                     if len(key)<=1:
-                        if str[i]==key and len(str)==1:
                         
+                        if str[i]==key and len(str)==1 and len(strs)==1:
+                            
                             return str[i]
+                        if str[i]==key and len(str)==1 and len(strs)>1:
+                            my_dict[key].append(str)
+                            print(my_dict)
 
                         if str[i]!=key:
                             empty_string = ""
@@ -47,20 +51,23 @@ class Solution:
 
                     else:
                         if len(key)==len(str) :
-                            if key==str[:i]:
-                                print('here1')
+                            
+                            
+                            if key==str[:i+1]:
+                                
                                 return key
                             else:
                                 if key[:-1]==str[:i]:
-                                    print(key)
-
+                                    
+                                    
                                     my_dict[key[:-1]].append(str)
                                     
 
                         if key[:-1]==str[:i]:
-
+                            
                             my_dict[key[:-1]].append(str)
                         else:
+                            
                             return value[0]
 
 
@@ -75,7 +82,7 @@ class Solution:
                 value=(list(my_dict.keys()))
 
                 my_dict=defaultdict(list)   
-
+                
         else:
             return ""       
         
@@ -85,8 +92,11 @@ class Solution:
             
         
         
-#strs = ["cir","car"]
+strs = ["car","cir"]
+strs =["flower","flow","flight"]
+strs =["ab", "a"]
+#strs =[ "a"]
 #strs = ["dog","racecar","car"]
-strs =["flower","flower","flower","flower"]
+#strs =["flower","flower","flower","flower"]
 item=Solution()
 print(item.longestCommonPrefix(strs))
