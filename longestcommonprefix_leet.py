@@ -26,41 +26,46 @@ class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         my_dict=defaultdict(list)
         i=0
-        key=strs[0][0]
-        size=len(strs)
+        if strs[0]:
+            key=strs[0][0]
+            if len(strs)==1:
+                return strs[0]
         
-        while len(my_dict)<=1 :
-            
-            for str in strs:
-                if len(key)<=1:
-                    if str[i]==key:
-                    
-                        my_dict[key].append(str)
-                    
-                    if str[i]!=key:
-                        print('" "')
-                        return
-                
-                    
-                else:
-                    
-                    if key[:-1]==str[:i]:
+        
+            while len(my_dict)<=1 :
+
+                for str in strs:
+                    if len(key)<=1:
+                        if str[i]==key:
                         
-                        my_dict[key[:-1]].append(str)
+                            my_dict[key].append(str)
+
+                        if str[i]!=key:
+                            empty_string = ""
+                            return empty_string
+
+
                     else:
-                        return value[0]
-                
+
+                        if key[:-1]==str[:i]:
+
+                            my_dict[key[:-1]].append(str)
+                        else:
+                            return value[0]
 
 
-                
 
-            i+=1  
-            key+=str[i]
-             
-            value=(list(my_dict.keys()))
-            
-            my_dict=defaultdict(list)   
-               
+
+
+                i+=1  
+                key+=str[i]
+
+                value=(list(my_dict.keys()))
+
+                my_dict=defaultdict(list)   
+
+        else:
+            return ""       
         
         
             
@@ -68,7 +73,8 @@ class Solution:
             
         
         
-strs = ["flower","flow","flight"]
-#strs = ["dog","racecar","car"]
+#strs = ["flower","flow","flight"]
+strs = ["dog","racecar","car"]
+strs =["ab", "a"]
 item=Solution()
 print(item.longestCommonPrefix(strs))
