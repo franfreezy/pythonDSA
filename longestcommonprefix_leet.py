@@ -26,16 +26,23 @@ class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         my_dict=defaultdict(list)
         i=0
-        key=''
+        key=strs[0][0]
         size=len(strs)
+        
         while len(my_dict)<=1:
 
             for str in strs:
-                if str[i]
-                key=str[i]
-                my_dict[key].append(str)
+                if str[i]==key:
+                    
+                    my_dict[key].append(str)
+
+            i+=1    
+                
+                
+                
             
-            
+            print (my_dict)
+            break
         
             
         
