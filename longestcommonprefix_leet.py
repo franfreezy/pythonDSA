@@ -36,9 +36,9 @@ class Solution:
 
                 for str in strs:
                     if len(key)<=1:
-                        if str[i]==key:
+                        if str[i]==key and len(str)==1:
                         
-                            my_dict[key].append(str)
+                            return str[i]
 
                         if str[i]!=key:
                             empty_string = ""
@@ -46,6 +46,7 @@ class Solution:
 
 
                     else:
+                        
 
                         if key[:-1]==str[:i]:
 
@@ -73,8 +74,8 @@ class Solution:
             
         
         
-#strs = ["flower","flow","flight"]
-strs = ["dog","racecar","car"]
+#strs = ["frlower","flow","flight"]
+#strs = ["dog","racecar","car"]
 strs =["ab", "a"]
 item=Solution()
 print(item.longestCommonPrefix(strs))
