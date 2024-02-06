@@ -40,9 +40,8 @@ class Solution:
                         if str[i]==key and len(str)==1 and len(strs)==1:
                             
                             return str[i]
-                        if str[i]==key and len(str)==1 and len(strs)>1:
-                            my_dict[key].append(str)
-                            print(my_dict)
+                        
+                            
 
                         if str[i]!=key:
                             empty_string = ""
@@ -94,7 +93,7 @@ class Solution:
         
 strs = ["car","cir"]
 strs =["flower","flow","flight"]
-strs =["ab", "a"]
+strs =["a", "a"]
 #strs =[ "a"]
 #strs = ["dog","racecar","car"]
 #strs =["flower","flower","flower","flower"]
