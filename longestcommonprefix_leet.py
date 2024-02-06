@@ -30,7 +30,7 @@ class Solution:
         size=len(strs)
         
         while len(my_dict)<=1 :
-            #print(key)
+            
             for str in strs:
                 if len(key)<=1:
                     if str[i]==key:
@@ -48,7 +48,7 @@ class Solution:
                         
                         my_dict[key[:-1]].append(str)
                     else:
-                        return
+                        return value[0]
                 
 
 
@@ -58,10 +58,10 @@ class Solution:
             key+=str[i]
              
             value=(list(my_dict.keys()))
-            print(value)
+            
             my_dict=defaultdict(list)   
-                
-        print(value)
+               
+        
         
             
         
@@ -71,4 +71,4 @@ class Solution:
 strs = ["flower","flow","flight"]
 #strs = ["dog","racecar","car"]
 item=Solution()
-item.longestCommonPrefix(strs)
+print(item.longestCommonPrefix(strs))
