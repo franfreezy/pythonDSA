@@ -55,12 +55,15 @@ class Solution:
                             return value[0]
 
 
+                print(i)
 
-
-
-                i+=1  
-                key+=str[i]
-
+                if i<len(str)-1:
+                    pass
+                
+                i+=1
+                key+=str[i]  
+                    
+                
                 value=(list(my_dict.keys()))
 
                 my_dict=defaultdict(list)   
@@ -74,8 +77,8 @@ class Solution:
             
         
         
-#strs = ["frlower","flow","flight"]
+strs = ["flower","flow","flight"]
 #strs = ["dog","racecar","car"]
-strs =["ab", "a"]
+#strs =["floweryttt","floweryttt","flower","flower"]
 item=Solution()
 print(item.longestCommonPrefix(strs))
