@@ -26,64 +26,14 @@ class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         my_dict=defaultdict(list)
         i=0
-        if strs[0]:
-            key=strs[0][0]
-            if len(strs)==1:
-                return strs[0]
-        
-        
-            while len(my_dict)<=1 :
-
-                for str in strs:
-                    if len(key)<=1:
-                        
-                        if str[i]==key and len(str)==1 and len(strs)==1:
-                            
-                            return str[i]
-                        
-                            
-
-                        if str[i]!=key:
-                            empty_string = ""
-                            return empty_string
-
-
-                    else:
-                        if len(key)==len(str) :
-                            
-                            
-                            if key==str[:i+1]:
-                                
-                                return key
-                            else:
-                                if key[:-1]==str[:i]:
-                                    
-                                    
-                                    my_dict[key[:-1]].append(str)
-                                    
-
-                        if key[:-1]==str[:i]:
-                            
-                            my_dict[key[:-1]].append(str)
-                        else:
-                            
-                            return value[0]
-
-
-                
-
-                if i<len(str)-1:
-                    i+=1
-                    key+=str[i]  
-                
-                    
-                
-                value=(list(my_dict.keys()))
-
-                my_dict=defaultdict(list)   
-                
+        if len(strs)<1:
+            return ''
+        if len(strs)==1:
+            return strs[0]
         else:
-            return ""       
+            while len(my_dict)==1:
+                for str in strs:
+                          
         
         
             
