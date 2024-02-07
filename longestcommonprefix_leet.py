@@ -32,9 +32,31 @@ class Solution:
         if len(strs)==1: # takes care of one with one element
             return strs[0]
         else:
-            while len(my_dict)<=1:
+            while  i<3:
+                key+=strs[0][i]
+                count=0
+                size=len(my_dict[key])
+                print(size)
                 for str in strs:
-                    return(str)
+                    string=str[0:i+1]
+                    
+                    
+                    if key==string :
+                        count+=1
+                        my_dict[key].append(str)
+                        print(size)
+                        
+
+                
+                
+
+                i+=1
+                if 
+                print(my_dict)
+                value=list(my_dict.keys())
+                
+                print(value)
+                
 
         
         
@@ -43,9 +65,9 @@ class Solution:
             
         
         
-strs = ["car","cir"]
+#strs = ["car","cir"]
 strs =["flower","flow","flight"]
-strs =["a", "a"]
+#strs =["a", "a"]
 #strs =[ "a"]
 #strs = ["dog","racecar","car"]
 #strs =["flower","flower","flower","flower"]
