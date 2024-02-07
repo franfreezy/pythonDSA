@@ -31,31 +31,36 @@ class Solution:
             return ''
         if len(strs)==1: # takes care of one with one element
             return strs[0]
+            
+        
         else:
-            while  i<3:
+            while  i<len(strs[0]):
                 key+=strs[0][i]
-                count=0
-                size=len(my_dict[key])
-                print(size)
+                
+                
                 for str in strs:
                     string=str[0:i+1]
                     
                     
-                    if key==string :
-                        count+=1
-                        my_dict[key].append(str)
-                        print(size)
+                    if key==string:
                         
-
+                        my_dict[key].append(str)
+                        
+                        
+                size=len(my_dict[key])
+                if size==len(strs):
+                    i+=1
+                else:
+                    value=list(my_dict.keys())
+                    return value[-2]
+                
+            value=list(my_dict.keys())
+            return value[-1]
                 
                 
-
-                i+=1
-                if 
-                print(my_dict)
-                value=list(my_dict.keys())
                 
-                print(value)
+                
+                
                 
 
         
