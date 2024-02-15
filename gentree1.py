@@ -10,7 +10,8 @@ class GeneralTree:
         
 
     def Print(self):
-        print(self.data)
+        distinguisher=" "*self.level_finder()
+        print(distinguisher+self.data)
         if self.children:
             for child  in self.children:
                 child.Print()
@@ -34,6 +35,6 @@ if __name__=='__main__':
     TIE.addChild(GeneralTree("TIE"))
     school.addChild(EEE)
     school.addChild(TIE)
-    print(school.level_finder())
-    #school.Print()
+    #print(school.level_finder())
+    school.Print()
 
