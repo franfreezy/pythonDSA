@@ -16,12 +16,13 @@ class GeneralTree:
                 child.Print()
     
     def level_finder(self):
-        p=self.parent
         count=0
+        p=self.parent
+        
         while p:
             count+=1
             p=p.parent
-            return count
+        return count #this indentation returns zero, in the while returns none
 
 if __name__=='__main__':
     school=GeneralTree("COETEC")
