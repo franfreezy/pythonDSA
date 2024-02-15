@@ -14,6 +14,9 @@ class GeneralTree:
         if self.children:
             for child  in self.children:
                 child.Print()
+    
+    def level_finder(self):
+        
 
 if __name__=='__main__':
     school=GeneralTree("COETEC")
