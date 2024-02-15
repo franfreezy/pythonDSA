@@ -1,3 +1,5 @@
 class GeneralTree:
     def __init__(self, data):
-        pass
+        self.data=data
+        self.children=[]
+        self.parent=None
