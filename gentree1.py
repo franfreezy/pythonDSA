@@ -16,7 +16,12 @@ class GeneralTree:
                 child.Print()
     
     def level_finder(self):
-        
+        p=self.parent
+        count=0
+        while p:
+            count+=1
+            p=p.parent
+            return count
 
 if __name__=='__main__':
     school=GeneralTree("COETEC")
@@ -28,5 +33,6 @@ if __name__=='__main__':
     TIE.addChild(GeneralTree("TIE"))
     school.addChild(EEE)
     school.addChild(TIE)
-    school.Print()
+    print(school.level_finder())
+    #school.Print()
 
